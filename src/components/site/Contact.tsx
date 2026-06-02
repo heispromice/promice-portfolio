@@ -32,7 +32,6 @@ export function Contact() {
         <div className="border-t border-white/[0.04] pt-16 md:pt-24">
           <SectionLabel index="— Connection" title="Start a conversation." />
 
-          {/* FIKSA: Font size imepunguzwa kuwa md:text-5xl kwa muonekano wa ki-Senior na wa kisasa */}
           <h2 className="mt-10 max-w-4xl font-serif text-[32px] leading-[1.1] tracking-tight text-[#F4F4F4] md:text-5xl">
             Let's design and engineer solutions that scale.{" "}
             <span className="italic text-[#94A3B8]">Crafting software with absolute purpose</span>
@@ -41,14 +40,14 @@ export function Contact() {
 
           <div className="mt-16 grid gap-12 md:grid-cols-12">
             
-            {/* LEFT COLUMN: Humanized, Professional Narrative & CTAs */}
+            {/* LEFT COLUMN: Professional Narrative & CTAs */}
             <div className="space-y-10 lg:col-span-6">
               
               <div className="space-y-4 max-w-xl">
                 <p className="font-ui text-[10px] uppercase tracking-[0.25em] text-[#94A3B8]">
                   Direct Engagement
                 </p>
-                {/* FIKSA: Maelezo yameongezwa na kuwa ya ki-humanized & software-focused */}
+              
                 <p className="text-[14px] md:text-[15px] leading-relaxed text-[#94A3B8]/90">
                   Whether you have a fully mapped architectural requirement, a complex product idea that needs full-stack development, or simply want to explore how robust backends can elevate your platform's reliability—I am always open to strategic engineering discussions. 
                 </p>

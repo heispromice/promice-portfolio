@@ -4,7 +4,6 @@ import { FolderGit2, ExternalLink, Database, Cpu } from "lucide-react";
 export function Projects() {
   /**
    * Technical projects dataset curated for an enterprise software development profile.
-   * All conceptual overviews, implementation definitions, and functional scopes are written in English.
    */
   const projectList = [
     {

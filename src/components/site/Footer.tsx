@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ArrowUp, X, Shield, Scale } from "lucide-react";
 
 export function Footer() {
-  // Masuala ya ki-Senior: State za kudhibiti mifumo ya Modals
+  //State za kudhibiti mifumo ya Modals
   const [isImprintOpen, setIsImprintOpen] = useState(false);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
@@ -70,10 +70,10 @@ export function Footer() {
           
           {/* Column 1: Copyright */}
           <p className="font-ui text-[11px] text-[#94A3B8]">
-            © {new Date().getFullYear()} Fredrick N. Claudi. Specialized Systems Architect. All rights reserved. Tanzania.
+            © {new Date().getFullYear()} Fredrick N. Claudi. All rights reserved. Tanzania.
           </p>
 
-          {/* Column 2: Legal & Utility (Fiksa Kamili) */}
+          {/* Column 2: Legal & Utility */}
           <ul className="flex flex-wrap gap-x-8 gap-y-3 font-ui text-[11px] uppercase tracking-[0.2em] text-[#94A3B8]">
             <li>
               <button 
@@ -102,7 +102,7 @@ export function Footer() {
       </div>
 
       {/* ========================================================================= */}
-      {/* 1. IMPRINT MODAL SYSTEM (Mtu akibofya inatokea juu kwa ulaini wa ki-Senior) */}
+      {/* 1. IMPRINT MODAL SYSTEM  */}
       {/* ========================================================================= */}
       {isImprintOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 animate-fadeIn">
@@ -120,7 +120,7 @@ export function Footer() {
             
             <div className="flex items-center gap-3 border-b border-white/[0.05] pb-4">
               <Scale className="text-[#D8B79A] h-5 w-5" />
-              <h3 className="font-serif text-lg text-[#F4F4F4]">Imprint / Legal Notice</h3>
+              <h3 className="font-serif text-lg text-[#F4F4F4]">Legal Notice</h3>
             </div>
             
             <div className="mt-6 space-y-4 font-sans text-xs leading-relaxed text-[#94A3B8]">
