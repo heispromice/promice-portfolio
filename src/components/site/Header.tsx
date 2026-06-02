@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
+import { LogoIcon } from "./Preloader"; 
 
 const nav = [
   { label: "About", href: "#about" },
@@ -10,19 +11,7 @@ const nav = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-
-  /**
-   * Monitor scroll displacement to toggle header background opacity configurations.
-   * Keeps the header 100% transparent at the top viewport boundary.
-   */
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   /**
    * Prevents standard body viewport text scrolling when mobile navigational drawer is engaged.
@@ -34,7 +23,6 @@ export function Header() {
 
   /**
    * Implements the Intersection Observer API to detect active components in real-time.
-   * Dynamically tracks target components and assigns context profiles to active sections.
    */
   useEffect(() => {
     const observerOptions = {
@@ -58,31 +46,23 @@ export function Header() {
       if (element) observer.observe(element);
     });
 
-    return () => {
-      nav.forEach((item) => {
-        const element = document.querySelector(item.href);
-        if (element) observer.unobserve(element);
-      });
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? "bg-[#0B0F19]/40 border-b border-white/[0.04]" 
-          : "bg-transparent"
-      }`}
+      // FIKSA YA KI-SENIOR: Imebaki bg-transparent pekee. Haina blur, haina rangi ya nyuma, 100% transparent hata ukiscroll!
+      className="fixed inset-x-0 top-0 z-50 bg-transparent transition-all duration-300"
     >
       <div className="container-pro flex h-16 items-center justify-between md:h-20">
-        {/* Absolute Original Title Design */}
+        
+        {/* BRAND LOGO CONTEXT */}
         <a
-          href="#top"
-          className="font-mono text-sm tracking-tight text-[#F4F4F4]"
-          aria-label="promice.dev — home"
+          href="#hero"
+          className="flex items-center justify-center transition-transform duration-300 active:scale-95"
+          aria-label="Fredrick N. Claudi — home"
         >
-          <span className="text-[#94A3B8]"></span>promice
-          <span className="text-[#D8B79A]">.</span>dev
+          <LogoIcon />
         </a>
 
         {/* Desktop Navigation Layout */}
@@ -127,20 +107,18 @@ export function Header() {
         </button>
       </div>
 
-      {/* Devon Stank Full-Screen Overlay Infrastructure with Enhanced Backdrop Blur */}
+      {/* Devon Stank Full-Screen Overlay Infrastructure for Mobile Menu */}
       <div
         className={`fixed inset-0 z-40 md:hidden transition-all duration-500 ease-in-out ${
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         aria-hidden={!open}
       >
-        {/* Full Screen Overlay Background with High Density Blur Effect */}
         <div
           className="absolute inset-0 bg-[#0B0F19]/95 backdrop-blur-xl transition-all duration-500"
           onClick={() => setOpen(false)}
         />
         
-        {/* Full Width Menu Link Canvas */}
         <div
           role="dialog"
           aria-modal="true"
@@ -148,12 +126,10 @@ export function Header() {
           className="absolute inset-0 h-dvh w-full bg-transparent p-6 flex flex-col justify-between"
         >
           <div>
-            {/* Top Navigation Control Spacer */}
             <div className="flex items-center justify-between max-w-7xl mx-auto w-full px-4 h-16">
               <span className="font-mono text-sm text-[#94A3B8]">Menu</span>
             </div>
             
-            {/* Left-Aligned Links with Cascade Slide Effects */}
             <nav className="mt-20 px-8 sm:px-12 text-left w-full max-w-4xl" aria-label="Mobile primary">
               <ul className="space-y-8">
                 {nav.map((n, index) => {
@@ -189,46 +165,14 @@ export function Header() {
             </nav>
           </div>
 
-          {/* Connect Links Footer Panel */}
           <div className="pt-6 pb-8 px-8 sm:px-12 border-t border-white/[0.03] max-w-4xl w-full mx-auto">
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#94A3B8] mb-4">
               Connect
             </p>
             <div className="flex items-center gap-6">
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="text-[#D8B79A] hover:text-[#F4F4F4] transition-colors"
-                aria-label="GitHub"
-              >
-                <Github className="h-[18px] w-[18px]" />
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="text-[#D8B79A] hover:text-[#F4F4F4] transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-[18px] w-[18px]" />
-              </a>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="text-[#D8B79A] hover:text-[#F4F4F4] transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-[18px] w-[18px]" />
-              </a>
-               <a 
-                href="mailto:fredrick@promice.dev" 
-                className="text-[#D8B79A] hover:text-[#F4F4F4] transition-colors"
-                aria-label="Email"
-              >
-                <Mail className="h-[18px] w-[18px]" />
-              </a>
+              <a href="https://github.com/heispromice" target="_blank" rel="noreferrer" className="text-[#D8B79A] hover:text-[#F4F4F4] transition-colors"><Github className="h-[18px] w-[18px]" /></a>
+              <a href="https://www.linkedin.com/in/fredrick-claudi-5a162230b" target="_blank" rel="noreferrer" className="text-[#D8B79A] hover:text-[#F4F4F4] transition-colors"><Linkedin className="h-[18px] w-[18px]" /></a>
+              <a href="mailto:heispromice@gmail.com" className="text-[#D8B79A] hover:text-[#F4F4F4] transition-colors"><Mail className="h-[18px] w-[18px]" /></a>
             </div>
           </div>
         </div>
