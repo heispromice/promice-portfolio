@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ArrowUp, X, Shield, Scale } from "lucide-react";
 
 export function Footer() {
-  //State za kudhibiti mifumo ya Modals
+  // State za kudhibiti mifumo ya Modals
   const [isImprintOpen, setIsImprintOpen] = useState(false);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
@@ -25,25 +25,36 @@ export function Footer() {
           
           {/* Column 1: Technical Signature */}
           <div className="space-y-4 md:col-span-2">
-            <div
-              className="flex h-14 w-14 items-center justify-center rounded-full border border-white/10"
-              aria-hidden="true"
-            >
-              <span className="font-serif text-2xl tracking-tight text-[#F4F4F4]">
-                F<span className="text-[#D8B79A]">·</span>C
-              </span>
+            
+            {/* NEW BRAND LOGO ICON: Replaced F.C circle with the customized 'P' vector (Non-gold / White-muted) */}
+            <div className="relative flex items-center justify-center w-12 h-12 rounded-full border border-white/10 text-white/80">
+              <svg
+                viewBox="0 0 100 100"
+                className="w-8 h-8 fill-none stroke-current opacity-80"
+                strokeWidth="5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                {/* Static single-stroke continuous identity layout mapping matching Preloader */}
+                <circle cx="50" cy="50" r="40" />
+                <path d="M 38,36 L 52,36 C 64,36 64,54 52,54 L 44,54 L 44,72" strokeWidth="5.5" />
+              </svg>
             </div>
-            <p className="max-w-md font-sans text-xs leading-relaxed text-[#94A3B8]/90">
+
+            {/* Increased font-size slightly from text-xs to text-[13px] for enhanced structural readability */}
+            <p className="max-w-md font-sans text-[15px] leading-relaxed text-[#94A3B8]/90">
               Fredrick N. Claudi. Specialized in engineering high-performance programmatic systems and reliable software architectures.
             </p>
           </div>
 
           {/* Column 2: EXPLORE (Quick Sitemap) */}
           <div className="md:col-start-3">
-            <p className="font-ui text-[10px] uppercase tracking-[0.25em] text-[#94A3B8]">
+            <p className="font-ui text-[11px] uppercase tracking-[0.25em] text-[#94A3B8]">
               Explore
             </p>
-            <ul className="mt-4 space-y-2.5 font-sans text-xs text-[#94A3B8]">
+            {/* Increased font-size slightly from text-xs to text-[13px] */}
+            <ul className="mt-4 space-y-2.5 font-sans text-[14px] text-[#94A3B8]">
               <li><a href="#hero" className="hover:text-[#F4F4F4] transition-colors">Architecture</a></li>
               <li><a href="#about" className="hover:text-[#F4F4F4] transition-colors">Philosophy</a></li>
               <li><a href="#projects" className="hover:text-[#F4F4F4] transition-colors">Systems</a></li>
@@ -53,10 +64,11 @@ export function Footer() {
 
           {/* Column 3: ENGAGE */}
           <div className="md:col-start-4">
-            <p className="font-ui text-[10px] uppercase tracking-[0.25em] text-[#94A3B8]">
+            <p className="font-ui text-[11px] uppercase tracking-[0.25em] text-[#94A3B8]">
               Engage
             </p>
-            <ul className="mt-4 space-y-2.5 font-sans text-xs text-[#94A3B8]">
+            {/* Increased font-size slightly from text-xs to text-[13px] */}
+            <ul className="mt-4 space-y-2.5 font-sans text-[14px] text-[#94A3B8]">
               <li><a href="#contact" className="hover:text-[#F4F4F4] transition-colors">Consultation</a></li>
               <li><a href="#contact" className="hover:text-[#F4F4F4] transition-colors">Direct WhatsApp</a></li>
               <li><a href="mailto:heispromice@gmail.com" className="hover:text-[#F4F4F4] transition-colors">Direct Email</a></li>
@@ -69,7 +81,7 @@ export function Footer() {
         <div className="mt-10 flex flex-col-reverse items-start justify-between gap-6 md:flex-row md:items-center md:mt-12">
           
           {/* Column 1: Copyright */}
-          <p className="font-ui text-[11px] text-[#94A3B8]">
+          <p className="font-ui text-[12px] text-[#94A3B8]">
             © {new Date().getFullYear()} Fredrick N. Claudi. All rights reserved. Tanzania.
           </p>
 
@@ -120,7 +132,7 @@ export function Footer() {
             
             <div className="flex items-center gap-3 border-b border-white/[0.05] pb-4">
               <Scale className="text-[#D8B79A] h-5 w-5" />
-              <h3 className="font-serif text-lg text-[#F4F4F4]">Legal Notice</h3>
+              <h3 className="font-semibold text-lg text-[#F4F4F4]">Legal Notice</h3>
             </div>
             
             <div className="mt-6 space-y-4 font-sans text-xs leading-relaxed text-[#94A3B8]">
@@ -162,7 +174,7 @@ export function Footer() {
             
             <div className="flex items-center gap-3 border-b border-white/[0.05] pb-4">
               <Shield className="text-[#D8B79A] h-5 w-5" />
-              <h3 className="font-serif text-lg text-[#F4F4F4]">Privacy Protocol</h3>
+              <h3 className="font-semibold text-lg text-[#F4F4F4]">Privacy Protocol</h3>
             </div>
             
             <div className="mt-6 max-h-[60vh] overflow-y-auto pr-2 space-y-4 font-sans text-xs leading-relaxed text-[#94A3B8]">

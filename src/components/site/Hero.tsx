@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github, Linkedin, Instagram, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail, Phone, Eye } from "lucide-react"; 
 import profilePic from "./profile2.jpg";
 
 export function Hero() {
@@ -62,7 +62,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.22 }}
-              className="flex items-center gap-6 pt-2 text-white/90" // Base is white for high visibility
+              className="flex items-center gap-6 pt-2 text-white/90"
             >
               <a href="https://github.com/heispromice" target="_blank" rel="noreferrer" className="hover:text-[#D8B79A] transition-all duration-300 hover:-translate-y-1"><Github size={20} /></a>
               <a href="https://www.linkedin.com/in/fredrick-claudi-5a162230b" target="_blank" rel="noreferrer" className="hover:text-[#D8B79A] transition-all duration-300 hover:-translate-y-1"><Linkedin size={20} /></a>
@@ -88,16 +88,18 @@ export function Hero() {
                 Explore Systems
               </a>
               <a
-                href="#contact"
+                href="/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-7 py-3.5 font-ui text-[12px] font-bold text-[#F4F4F4] transition-colors hover:border-[#D8B79A]/40 hover:text-[#D8B79A]"
               >
-                Get In Touch
-                <ArrowUpRight size={14} />
+                CHECK MY CV
+                <Eye size={14} className="transition-transform group-hover:scale-105" />
               </a>
             </motion.div>
           </div>
 
-          {/* RIGHT COLUMN: Brittany Chiang Styled Graphic Wrapper (Takes 5 cols on desktop) */}
+          {/* RIGHT COLUMN: Styled Graphic Wrapper (Takes 5 cols on desktop) */}
           <div className="lg:col-span-5 order-2 flex justify-start w-full pt-4 lg:pt-0">
             {/* The Master Container controlling the main entrance animation */}
             <motion.div
@@ -106,28 +108,33 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="relative select-none group w-full max-w-[260px] sm:max-w-[300px] aspect-[4/5]"
             >
-              {/* THE FLOATING ACCENT FRAME (Sits behind the photo) */}
-              <motion.div variants={{ hover: { x: 12, y: 12, borderColor: "#D8B79A" } }} className="absolute inset-0 translate-x-[16px] translate-y-[16px] rounded-2xl border-2 border-[#D8B79A]/30 transition-all duration-300" />
+              {/* THE FLOATING ACCENT FRAME: Kwenye desktop unapo-hover inasogea mbele kidogo (group-hover:translate-x-[22px]) */}
+              <div className="absolute inset-0 translate-x-[16px] translate-y-[16px] rounded-2xl border-2 border-[#D8B79A]/30 transition-all duration-300 ease-out group-hover:translate-x-[22px] group-hover:translate-y-[22px] group-hover:borderColor-[#D8B79A]" />
 
-              {/* THE IMAGE CONTAINER (Sits on top) */}
-              <motion.div
-                whileHover={{ x: -4, y: -4 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="relative w-full h-full rounded-2xl overflow-hidden bg-[#0B0F19] border border-white/[0.08] shadow-2xl cursor-pointer"
+              {/* THE IMAGE CONTAINER */}
+              <div
+                className="relative w-full h-full rounded-2xl overflow-hidden bg-[#0B0F19] border border-white/[0.08] shadow-2xl cursor-pointer transition-all duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1 active:translate-x-0 active:translate-y-0"
               >
-                {/* THE IMAGE ELEMENT: Grayscale luminosity with soft skin overlay */}
-                <img src={profilePic} alt="Fredrick N. Claudi" className="w-full h-full object-cover grayscale opacity-75 mix-blend-luminosity transition-all duration-500 ease-out group-hover:filter-none group-hover:opacity-100 group-hover:mix-blend-normal" />
-                <div className="absolute inset-0 bg-[#D8B79A]/10 mix-blend-multiply transition-opacity duration-500 pointer-events-none group-hover:opacity-0" />
+                {/* UJANJA WA HALI YA JUU:
+                  1. Kwenye Desktop: group-hover inasogeza picha juu na kushoto kidogo (-translate-x-1) kuleta ile 3D dynamic effect.
+                  2. Kwenye Mobile: Tumezima uhuishaji wa kusogea kwa kutumia 'active:translate-x-0' ili vipimo vya box visubiri layout recalculation ambayo ingesababisha screen kushtuka.
+                  3. Rangi asilia inarudi laini kabisa (active:filter-none active:opacity-100) bila kufanya page imove hata pixel moja!
+                */}
+                <img 
+                  src={profilePic} 
+                  alt="Fredrick N. Claudi" 
+                  className="w-full h-full object-cover grayscale opacity-75 mix-blend-luminosity transition-all duration-300 ease-out group-hover:filter-none group-hover:opacity-100 group-hover:mix-blend-normal active:filter-none active:opacity-100 active:mix-blend-normal" 
+                />
+                <div className="absolute inset-0 bg-[#D8B79A]/10 mix-blend-multiply transition-opacity duration-500 pointer-events-none group-hover:opacity-0 active:opacity-0" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/60 via-transparent to-transparent pointer-events-none" />
-              </motion.div>
+              </div>
             </motion.div>
           </div>
 
           {/* MOBILE ACTION ANCHORS: Mounted below photo */}
           <div className="col-span-1 order-3 lg:hidden flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full pt-4">
             <a href="#projects" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#D8B79A] px-6 py-4 font-ui text-[12px] font-bold text-[#0B0F19] transition-all">Explore Systems</a>
-            <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-4 font-ui text-[12px] font-bold text-[#F4F4F4] transition-colors">Get In Touch <ArrowUpRight size={14} /></a>
+            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-4 font-ui text-[12px] font-bold text-[#F4F4F4] transition-colors">Check My CV <Eye size={14} /></a>
           </div>
 
         </div>

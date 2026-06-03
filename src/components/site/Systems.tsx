@@ -15,7 +15,7 @@ export function Systems() {
 
         <div className="mt-8 flex flex-col gap-6 rounded-[24px] border border-white/5 bg-white/[0.01] p-6 md:p-10 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <h2 className="font-serif text-3xl tracking-tight text-[#F4F4F4] md:text-5xl">
+            <h2 className="font-semibold text-3xl tracking-tight text-[#F4F4F4] md:text-5xl">
               A smaller doorway to older systems.
             </h2>
             <p className="mt-4 max-w-xl text-[14px] leading-7 text-[#94A3B8]">

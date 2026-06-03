@@ -1,29 +1,77 @@
 import { useEffect, useState } from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { LogoIcon } from "./Preloader"; 
+import { motion } from "framer-motion";
+
+interface LogoIconProps {
+  isTriggered?: boolean;
+}
+
+function HeaderLogoIcon({ isTriggered }: LogoIconProps) {
+  return (
+    <span className="relative group flex items-center justify-center w-10 h-10 cursor-pointer select-none">
+      <svg
+        viewBox="0 0 100 100"
+        
+        className="w-full h-full fill-none stroke-[#D8B79A] group-hover:stroke-[#E2E8F0] transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_10px_rgba(226,232,240,0.3)]"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <motion.circle 
+          cx="50" 
+          cy="50" 
+          r="40" 
+          className="opacity-95"
+          strokeWidth="5"
+          animate={{ pathLength: isTriggered ? [1, 0, 1] : 1 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+        />
+        <motion.path 
+          d="M 38,36 L 52,36 C 64,36 64,54 52,54 L 44,54 L 44,72" 
+          strokeWidth="5"
+          animate={{ pathLength: isTriggered ? [1, 0, 1] : 1 }}
+          transition={{ duration: 1.2, ease: "easeInOut", delay: 0.1 }}
+        />
+      </svg>
+    </span>
+  );
+}
 
 const nav = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Systems", href: "#systems" },
-  { label: "Contact", href: "#contact" },
+  { label: "ABOUT", href: "#about" },
+  { label: "PROJECTS", href: "#projects" },
+  { label: "SYSTEMS", href: "#systems" },
+  { label: "CONTACT", href: "#contact" },
 ];
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  /**
-   * Prevents standard body viewport text scrolling when mobile navigational drawer is engaged.
-   */
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault(); // Inazuia browser isivute URL kienyeji na kurusha screen
+    if (isAnimating) return;
+
+    setIsAnimating(true);
+
+    // Pure dynamic window scroll optimization
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+    setTimeout(() => {
+      setIsAnimating(false);
+      // Falsafa ya ki-Senior: Hatuweki pushState hapa ili kuzuia glitch ya URL bar layout paint bounce
+    }, 1300);
+  };
+
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
-  /**
-   * Implements the Intersection Observer API to detect active components in real-time.
-   */
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -50,22 +98,17 @@ export function Header() {
   }, []);
 
   return (
-    <header
-      // FIKSA YA KI-SENIOR: Imebaki bg-transparent pekee. Haina blur, haina rangi ya nyuma, 100% transparent hata ukiscroll!
-      className="fixed inset-x-0 top-0 z-50 bg-transparent transition-all duration-300"
-    >
+    <header className="fixed inset-x-0 top-0 z-50 bg-transparent transition-all duration-300">
       <div className="container-pro flex h-16 items-center justify-between md:h-20">
-        
-        {/* BRAND LOGO CONTEXT */}
         <a
           href="#hero"
+          onClick={handleLogoClick}
           className="flex items-center justify-center transition-transform duration-300 active:scale-95"
           aria-label="Fredrick N. Claudi — home"
         >
-          <LogoIcon />
+          <HeaderLogoIcon isTriggered={isAnimating} />
         </a>
 
-        {/* Desktop Navigation Layout */}
         <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex items-center gap-9 font-mono text-[13px] tracking-wide text-[#94A3B8]">
             {nav.map((n) => {
@@ -79,13 +122,7 @@ export function Header() {
                     }`}
                   >
                     {n.label}
-                    <span 
-                      className={`absolute bottom-0 left-0 h-[1px] transition-all duration-300 ${
-                        isActive 
-                          ? "w-full bg-[#F4F4F4]" 
-                          : "w-0 bg-[#D8B79A] group-hover:w-full"
-                      }`} 
-                    />
+                    <span className={`absolute bottom-0 left-0 h-[1px] transition-all duration-300 ${isActive ? "w-full bg-[#F4F4F4]" : "w-0 bg-[#D8B79A] group-hover:w-full"}`} />
                   </a>
                 </li>
               );
@@ -93,7 +130,6 @@ export function Header() {
           </ul>
         </nav>
 
-        {/* Devon Stank Style Animated Hamburger Button */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden z-50 inline-flex h-11 w-11 flex-col items-center justify-center text-[#F4F4F4] focus:outline-none relative"
@@ -107,29 +143,13 @@ export function Header() {
         </button>
       </div>
 
-      {/* Devon Stank Full-Screen Overlay Infrastructure for Mobile Menu */}
-      <div
-        className={`fixed inset-0 z-40 md:hidden transition-all duration-500 ease-in-out ${
-          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
-        aria-hidden={!open}
-      >
-        <div
-          className="absolute inset-0 bg-[#0B0F19]/95 backdrop-blur-xl transition-all duration-500"
-          onClick={() => setOpen(false)}
-        />
-        
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label="Mobile menu"
-          className="absolute inset-0 h-dvh w-full bg-transparent p-6 flex flex-col justify-between"
-        >
+      <div className={`fixed inset-0 z-40 md:hidden transition-all duration-500 ease-in-out ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`} aria-hidden={!open}>
+        <div className="absolute inset-0 bg-[#0B0F19]/95 backdrop-blur-xl transition-all duration-500" onClick={() => setOpen(false)} />
+        <div role="dialog" aria-modal="true" aria-label="Mobile menu" className="absolute inset-0 h-dvh w-full bg-transparent p-6 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between max-w-7xl mx-auto w-full px-4 h-16">
               <span className="font-mono text-sm text-[#94A3B8]">Menu</span>
             </div>
-            
             <nav className="mt-20 px-8 sm:px-12 text-left w-full max-w-4xl" aria-label="Mobile primary">
               <ul className="space-y-8">
                 {nav.map((n, index) => {
@@ -140,23 +160,12 @@ export function Header() {
                         href={n.href}
                         onClick={() => setOpen(false)}
                         style={{ transitionDelay: open ? `${index * 60}ms` : '0ms' }}
-                        className={`group inline-flex items-baseline relative pb-1 transform transition-all duration-500 ease-out ${
-                          open ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
-                        }`}
+                        className={`group inline-flex items-baseline relative pb-1 transform transition-all duration-500 ease-out ${open ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
                       >
-                        <span className={`font-serif text-[32px] sm:text-[42px] tracking-tight transition-colors duration-300 ${
-                          isActive ? "text-[#D8B79A]" : "text-[#F4F4F4] group-hover:text-[#D8B79A]"
-                        }`}>
+                        <span className={`font-serif text-[32px] sm:text-[42px] tracking-tight transition-colors duration-300 ${isActive ? "text-[#D8B79A]" : "text-[#F4F4F4] group-hover:text-[#D8B79A]"}`}>
                           {n.label}
                         </span>
-                        
-                        <span 
-                          className={`absolute bottom-0 left-0 h-[1px] transition-all duration-300 ${
-                            isActive 
-                              ? "w-full bg-[#D8B79A]" 
-                              : "w-0 bg-[#D8B79A] group-hover:w-full"
-                          }`} 
-                        />
+                        <span className={`absolute bottom-0 left-0 h-[1px] transition-all duration-300 ${isActive ? "w-full bg-[#D8B79A]" : "w-0 bg-[#D8B79A] group-hover:w-full"}`} />
                       </a>
                     </li>
                   );
@@ -164,11 +173,8 @@ export function Header() {
               </ul>
             </nav>
           </div>
-
           <div className="pt-6 pb-8 px-8 sm:px-12 border-t border-white/[0.03] max-w-4xl w-full mx-auto">
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#94A3B8] mb-4">
-              Connect
-            </p>
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#94A3B8] mb-4">Connect</p>
             <div className="flex items-center gap-6">
               <a href="https://github.com/heispromice" target="_blank" rel="noreferrer" className="text-[#D8B79A] hover:text-[#F4F4F4] transition-colors"><Github className="h-[18px] w-[18px]" /></a>
               <a href="https://www.linkedin.com/in/fredrick-claudi-5a162230b" target="_blank" rel="noreferrer" className="text-[#D8B79A] hover:text-[#F4F4F4] transition-colors"><Linkedin className="h-[18px] w-[18px]" /></a>

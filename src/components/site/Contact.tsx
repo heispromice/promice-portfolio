@@ -32,9 +32,9 @@ export function Contact() {
         <div className="border-t border-white/[0.04] pt-16 md:pt-24">
           <SectionLabel index="— Connection" title="Start a conversation." />
 
-          <h2 className="mt-10 max-w-4xl font-serif text-[32px] leading-[1.1] tracking-tight text-[#F4F4F4] md:text-5xl">
+          <h2 className="mt-10 max-w-4xl font-semibold text-[24px] leading-[1.1] tracking-tight text-[#F4F4F4] md:text-5xl">
             Let's design and engineer solutions that scale.{" "}
-            <span className="italic text-[#94A3B8]">Crafting software with absolute purpose</span>
+            <span className="text-[#94A3B8]">Crafting software with absolute purpose</span>
             <span className="text-[#D8B79A]">.</span>
           </h2>
 
@@ -49,7 +49,7 @@ export function Contact() {
                 </p>
               
                 <p className="text-[14px] md:text-[15px] leading-relaxed text-[#94A3B8]/90">
-                  Whether you have a fully mapped architectural requirement, a complex product idea that needs full-stack development, or simply want to explore how robust backends can elevate your platform's reliability—I am always open to strategic engineering discussions. 
+                  Whether you have a fully mapped architectural requirement, a complex product idea that needs full-stack development, or simply want to explore how robust backends can elevate your platform's reliability, I am always open to strategic engineering discussions. 
                 </p>
                 <p className="text-[14px] md:text-[15px] leading-relaxed text-[#94A3B8]/90">
                   No generic forms, no automated handoffs. When you reach out, you connect directly with me to talk tech stacks, architecture, and deployment pipelines. I read and respond to every intentional inquiry.
