@@ -44,23 +44,29 @@ export function About() {
           </div>
 
           {/* Core Biography structured directly from reference narrative blueprint */}
-          <div className="space-y-6 font-sans text-[15px] leading-relaxed text-[#94A3B8]/90">
+         <div className="space-y-6 font-sans text-[15px] sm:text-[16px] leading-relaxed text-[#94A3B8]/90">
             <p>
-              I am an independent Software Developer and System Architect dedicated to designing, building, 
-              and optimizing robust applications for the web. Operating as a solo developer, I engineer custom 
-              technical platforms from the ground up, translating complex institutional requirements into refined programmatic systems.
+              I am an independent Software Developer passionate about building technology that solves meaningful, real-world problems. 
+              My work focuses on designing and developing robust digital systems for education, business, and public safety, 
+              with a strong emphasis on systems thinking, usability, and long-term maintainability.
             </p>
             <p>
-              As a Software Developer, I find immense value in bridging the critical gap between system logic and intuitive interface 
-              design. I combine deep backend architectural principles with an explicit eye for layout composition to deliver digital 
-              products that are mathematically structured, highly efficient under heavy loads, and fluid to interact with.
+              Driven by the vision of Tanzania's educational digital transformation, I am actively championing an initiative 
+              to ensure local schools and educational institutions bridge the digital divide. By developing custom websites and 
+              accessible learning platforms, my goal is to provide schools with the digital infrastructure needed to enhance 
+              administrative efficiency and modern learning outcomes.
             </p>
             <p>
-              When I am disconnected from the terminal, I invest my energy into intense physical fitness training, 
-              exploring computational linguistics, and sometimes analyzing dynamic market investment structures and stocks to challenge my cognitive limits.
+              Alongside software engineering, I have a deep interest in languages and communication. I am fluent in Swahili and English, 
+              maintain a working knowledge of Spanish and Japanese, and actively explore computational linguistics to understand the 
+              powerful intersection of language and technology.
+            </p>
+            <p>
+              I firmly believe that great software is not only technically sound—it must be purposeful, accessible, and engineered 
+              capable of creating a measurable, lasting impact in people's lives.
             </p>
           </div>
-        </div>
+          </div>
 
         {/* Right Column: Practice Areas Grid Matrix */}
         <div className="lg:col-span-5 space-y-6">

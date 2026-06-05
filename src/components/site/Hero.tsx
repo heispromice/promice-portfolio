@@ -44,7 +44,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="font-sans text-xl font-semibold tracking-tight text-[#94A3B8] sm:text-2xl lg:text-3xl"
             >
-              Building high-performance programmatic systems.
+              Junior Software Developer &amp; Business Information Systems Graduate
             </motion.h2>
 
             {/* Descriptive block defining software development capabilities */}
@@ -52,9 +52,9 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="max-w-xl text-[14px] sm:text-[15px] leading-relaxed text-[#94A3B8]/90"
+              className="max-w-2xl text-[15px] sm:text-[16px] lg:text-[18px] leading-relaxed text-[#94A3B8]/90 font-medium"
             >
-              I specialize in turning complex architectural requirements into clean, scalable code. From low-latency backend microservices to interactive client interfaces, I build production-grade web applications engineered for structural reliability and seamless data orchestration.
+              Building software solutions for education, business, and public safety. Focused on creating impactful, real-world applications that streamline operations and enhance societal security.
             </motion.p>
 
             {/* CONTACT ICONS CONTEXT: Updated for high contrast: White with Gold hover */}
