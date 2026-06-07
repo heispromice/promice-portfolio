@@ -2,33 +2,33 @@
 
 import { motion } from "framer-motion";
 import { Code2, Smartphone, BarChart3, ShieldCheck } from "lucide-react";
-import { ScrollReveal } from "./ScrollReveal"; // Hakikisha path ni sahihi kulingana na folda yako
+import { ScrollReveal } from "./ScrollReveal";
 
 export function About() {
-  /**
-   * Practice areas matrix specifying core operational disciplines.
-   * Replaces analytics framing with engineering, architecture, and consultative domains.
-   */
   const practiceAreas = [
     {
       title: "Full-Stack Web Development",
-      description: "Designing end-to-end web architectures using scalable frameworks, production-grade APIs, and responsive UI components.",
-      icon: <Code2 size={20} className="text-[#D8B79A]" />,
+      description: "Designing reliable end-to-end web applications with modern architectures and responsive UI layouts.",
+      skills: ["React", "Next.js", "Vite", "Node.js"],
+      icon: <Code2 size={18} className="text-[#D8B79A]" />,
     },
     {
       title: "Mobile Application Development",
-      description: "Building cross-platform mobile experiences prioritized for low-latency client delivery and native performance benchmarks.",
-      icon: <Smartphone size={20} className="text-[#D8B79A]" />,
+      description: "Building fast, high-performance cross-platform mobile experiences tailored for seamless native delivery.",
+      skills: ["React Native", "APIs", "Mobile UI"],
+      icon: <Smartphone size={18} className="text-[#D8B79A]" />,
     },
     {
       title: "Business Intelligence",
-      description: "Orchestrating robust data pipelines, dimensional modeling, and interactive semantic layers to drive performance insight.",
-      icon: <BarChart3 size={20} className="text-[#D8B79A]" />,
+      description: "Structuring clean data pipelines and interactive analytical dashboards to extract operational insights.",
+      skills: ["SQL", "Dashboards", "Data Modeling"],
+      icon: <BarChart3 size={18} className="text-[#D8B79A]" />,
     },
     {
       title: "ICT Consulting",
-      description: "Advising on systems auditing, architectural modernizations, infrastructure roadmaps, and secure deployment standards.",
-      icon: <ShieldCheck size={20} className="text-[#D8B79A]" />,
+      description: "Advising on systems infrastructure, technical audits, secure deployments, and digital scaling blueprints.",
+      skills: ["Architecture", "Security", "IT Audits"],
+      icon: <ShieldCheck size={18} className="text-[#D8B79A]" />,
     },
   ];
 
@@ -38,7 +38,6 @@ export function About() {
         
         {/* Left Column: Context Narrative Block */}
         <div className="lg:col-span-7 space-y-8">
-          {/* Section Heading - Number removed, line asset retained */}
           <ScrollReveal>
             <div className="flex items-center gap-4">
               <span className="font-bold text-xs uppercase tracking-[0.25em] text-[#D8B79A] whitespace-nowrap">
@@ -48,34 +47,17 @@ export function About() {
             </div>
           </ScrollReveal>
 
-          {/* Core Biography structured directly from reference narrative blueprint */}
           <div className="space-y-6 font-sans text-[15px] sm:text-[16px] leading-relaxed text-[#F4F4F4]/90">
             <ScrollReveal delay={0.1}>
               <p>
-                I am an independent Software Developer passionate about building technology that solves meaningful, real-world problems. 
-                My work focuses on designing and developing robust digital systems for education, business, and public safety, 
-                with a strong emphasis on systems thinking, usability, and long-term maintainability.
+                I’m Fredrick Claudi, a software developer building practical digital systems for schools, businesses, and public-service workflows.
+                My work focuses on web platforms, mobile applications, records systems, dashboards, and tools that help people manage information more clearly and work more efficiently.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.15}>
               <p>
-                Driven by the vision of Tanzania's educational digital transformation, I am actively championing an initiative 
-                to ensure local schools and educational institutions bridge the digital divide. By developing custom websites and 
-                accessible learning platforms, my goal is to provide schools with the digital infrastructure needed to enhance 
-                administrative efficiency and modern learning outcomes.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <p>
-                Alongside software engineering, I have a deep interest in languages and communication. I am fluent in Swahili and English, 
-                maintain a working knowledge of Spanish and Japanese, and actively explore computational linguistics to understand the 
-                powerful intersection of language and technology.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={0.25}>
-              <p>
-                I firmly believe that great software is not only technically sound—it must be purposeful, accessible, and engineered 
-                capable of creating a measurable, lasting impact in people's lives.
+                I’m especially interested in education technology and business systems in Tanzania, where reliable software can help schools, teams, and institutions close operational gaps.
+                Alongside development, I bring a strong interest in language, communication, and usability, which helps me build systems that are not only technical, but clear, accessible, and useful to the people who depend on them.
               </p>
             </ScrollReveal>
           </div>
@@ -86,7 +68,7 @@ export function About() {
           <ScrollReveal>
             <div className="flex items-center gap-4 lg:pt-0 pt-4">
               <span className="font-bold text-xs uppercase tracking-[0.25em] text-[#D8B79A] whitespace-nowrap">
-                Core Disciplines
+                What I Build
               </span>
               <div className="h-[1px] w-full bg-white/10 lg:block hidden" />
             </div>
@@ -100,16 +82,30 @@ export function About() {
                   transition={{ duration: 0.2 }}
                   className="group flex gap-4 p-4 rounded-xl border border-white/5 bg-white/[0.01] hover:border-[#D8B79A]/20 hover:bg-white/[0.02] transition-all"
                 >
-                  <div className="flex-shrink-0 mt-0.5 p-2 rounded-lg bg-white/5 border border-white/5 group-hover:border-[#D8B79A]/10 group-hover:bg-[#D8B79A]/5 transition-colors">
+                  <div className="flex-shrink-0 mt-0.5 p-1.5 h-fit rounded-lg bg-white/5 border border-white/5 group-hover:border-[#D8B79A]/10 group-hover:bg-[#D8B79A]/5 transition-colors">
                     {area.icon}
                   </div>
-                  <div className="space-y-1">
-                    <h4 className="font-sans text-sm font-semibold text-[#F4F4F4] group-hover:text-[#D8B79A] transition-colors">
-                      {area.title}
-                    </h4>
-                    <p className="text-xs leading-relaxed text-[#94A3B8]/70">
-                      {area.description}
-                    </p>
+                  <div className="space-y-2 w-full">
+                    <div className="space-y-1">
+                      <h4 className="font-sans text-sm font-semibold text-[#F4F4F4] group-hover:text-[#D8B79A] transition-colors">
+                        {area.title}
+                      </h4>
+                      <p className="text-xs leading-relaxed text-[#E2E8F0]/80">
+                        {area.description}
+                      </p>
+                    </div>
+                    
+                    {/* Skill tags array under the card descriptions */}
+                    <div className="flex flex-wrap gap-1.5 pt-1">
+                      {area.skills.map((skill) => (
+                        <span 
+                          key={skill} 
+                          className="text-[10px] font-medium font-mono px-2 py-0.5 rounded bg-white/[0.03] border border-white/[0.05] text-[#94A3B8] group-hover:text-[#D8B79A]/80 group-hover:border-[#D8B79A]/10 transition-colors"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </motion.div>
               </ScrollReveal>

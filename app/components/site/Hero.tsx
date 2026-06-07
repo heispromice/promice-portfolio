@@ -8,7 +8,6 @@ interface HeroProps {
   isParentLoading?: boolean;
 }
 
-// FIXED ANIMATED COUNTER ENGINE
 function AnimatedCounter({ from, to, suffix = "" }: { from: number; to: number; suffix?: string }) {
   const count = useMotionValue(from);
   const rounded = useTransform(count, (latest) => Math.floor(latest));
@@ -17,7 +16,7 @@ function AnimatedCounter({ from, to, suffix = "" }: { from: number; to: number; 
   useEffect(() => {
     const controls = animate(count, to, {
       duration: 1.4,
-      ease: [0.16, 1, 0.3, 1], // Smooth premium deceleration
+      ease: [0.16, 1, 0.3, 1],
     });
     
     return rounded.on("change", (latest) => {
@@ -36,10 +35,17 @@ export function Hero({ isParentLoading = false }: HeroProps) {
   const [isImgActive, setIsImgActive] = useState(false);
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+    
     const handleScroll = () => {
-      if (isImgActive) setIsImgActive(false);
+      const currentScrollY = window.scrollY;
+      if (Math.abs(currentScrollY - lastScrollY) > 8) {
+        if (isImgActive) setIsImgActive(false);
+      }
+      lastScrollY = currentScrollY;
     };
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isImgActive]);
 
@@ -85,7 +91,7 @@ export function Hero({ isParentLoading = false }: HeroProps) {
               variants={itemVariants}
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-[11px] font-medium tracking-normal text-[#D8B79A]"
             >
-              <span>SOFTWARE DEVELOPER | BI ANALYST</span>
+              <span>Hi, My name is,</span>
             </motion.div>
 
             <div className="space-y-2">
@@ -101,14 +107,14 @@ export function Hero({ isParentLoading = false }: HeroProps) {
               variants={itemVariants}
               className="font-sans text-xl font-semibold tracking-tight text-[#94A3B8] sm:text-2xl lg:text-3xl"
             >
-              Junior Software Developer &amp; Business Information Systems Graduate
+              A Software Developer &amp; Business Intelligence Analyst.
             </motion.h2>
 
             <motion.p 
               variants={itemVariants}
               className="max-w-2xl text-[15px] sm:text-[16px] lg:text-[18px] leading-relaxed text-[#F4F4F4] font-medium"
             >
-              Building software solutions for education, business, and public safety. Focused on creating impactful, real-world applications that streamline operations and enhance societal security.
+              Building software solutions for education, business, and public safety. I focus on creating impact, driving innovation and creating web and mobile applications that streamline operations for better decision-making and enhance societal security.
             </motion.p>
 
             {/* CONTACT ICONS */}
@@ -132,7 +138,7 @@ export function Hero({ isParentLoading = false }: HeroProps) {
                 <svg width={20} height={20} className="fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.498 5.352 1.499 5.485 0 9.948-4.467 9.951-9.96.001-2.659-1.026-5.158-2.894-7.03C17.13 1.79 14.635.764 12.012.764c-5.495 0-9.959 4.468-9.963 9.961-.001 2.083.541 4.116 1.566 5.86l-.99 3.614 3.701-.971zm11.514-4.814c-.312-.156-1.848-.912-2.126-1.013-.279-.102-.482-.156-.684.156-.202.311-.782.156-.959 1.164-.176.102-.353.156-.665.001-.312-.156-1.317-.486-2.51-1.549-.928-.827-1.554-1.849-1.737-2.16-.182-.312-.02-.481.136-.635.14-.139.312-.363.468-.545.156-.182.208-.312.312-.519.104-.208.052-.389-.026-.545-.078-.156-.684-1.649-.938-2.259-.247-.595-.5-.514-.684-.523-.176-.009-.38-.01-.584-.01-.204 0-.537.077-.817.382-.28.305-1.071 1.046-1.071 2.551 0 1.505 1.094 2.959 1.246 3.166.152.208 2.152 3.286 5.213 4.602.728.313 1.297.5 1.74.641.73.232 1.395.2 1.92.121.585-.088 1.848-.756 2.109-1.449.261-.693.261-1.288.182-1.411-.078-.123-.28-.195-.593-.351z"/></svg>
               </a>
 
-              <a href="https://www.instagram.com/_heispromice" target="_blank" rel="noreferrer" className="hover:text-[#D8B79A] transition-all duration-300 hover:-translate-y-1" aria-label="Instagram">
+              <a href="https://www.instagram.com/_promicee" target="_blank" rel="noreferrer" className="hover:text-[#D8B79A] transition-all duration-300 hover:-translate-y-1" aria-label="Instagram">
                 <svg width={20} height={20} className="fill-none stroke-current" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -144,14 +150,13 @@ export function Hero({ isParentLoading = false }: HeroProps) {
               <a href="tel:+255670844973" className="hover:text-[#D8B79A] transition-all duration-300 hover:-translate-y-1" aria-label="Phone"><Phone size={20} /></a>
             </motion.div>
 
-            {/* EXPERIENCES FEATURE - WITH DASHBOARD PREMIUM GLASS BACKGROUNDS */}
+            {/* EXPERIENCES FEATURE */}
             <motion.div 
               variants={itemVariants}
               className="grid grid-cols-2 gap-4 max-w-lg border-l border-white/[0.06] pl-6 pt-3 relative"
             >
               <div className="absolute left-0 top-3 bottom-3 w-[2px] bg-gradient-to-b from-[#D8B79A]/40 via-transparent to-transparent pointer-events-none" />
 
-              {/* CARD 1: YEARS EXPERIENCE */}
               <motion.div 
                 whileHover={{ y: -3, transition: { duration: 0.2 } }}
                 className="group/metric p-4 rounded-xl border border-white/[0.03] bg-white/[0.02] hover:bg-[#D8B79A]/[0.03] hover:border-[#D8B79A]/20 transition-all duration-300 cursor-default backdrop-blur-sm"
@@ -167,16 +172,15 @@ export function Hero({ isParentLoading = false }: HeroProps) {
                 </p>
               </motion.div>
 
-              {/* CARD 2: COMPANIES SERVED */}
               <motion.div 
                 whileHover={{ y: -3, transition: { duration: 0.2 } }}
                 className="group/metric p-4 rounded-xl border border-white/[0.03] bg-white/[0.02] hover:bg-[#D8B79A]/[0.03] hover:border-[#D8B79A]/20 transition-all duration-300 cursor-default backdrop-blur-sm"
               >
                 <div className="text-3xl font-bold font-serif text-[#D8B79A] tracking-tight flex items-baseline gap-0.5">
-                  {!isParentLoading && <AnimatedCounter from={0} to={2} />}
+                  {!isParentLoading && <AnimatedCounter from={0} to={3} />}
                 </div>
                 <p className="text-[10px] font-mono text-[#94A3B8] group-hover/metric:text-[#F4F4F4] uppercase tracking-wider font-semibold mt-1.5 transition-colors duration-300">
-                  Companies Served
+                  Projects completed
                 </p>
                 <p className="text-[11px] font-sans text-[#94A3B8]/60 mt-0.5 leading-snug">
                   Integrated systems deployed.
@@ -201,7 +205,7 @@ export function Hero({ isParentLoading = false }: HeroProps) {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-7 py-3.5 text-[12px] font-bold text-[#F4F4F4] transition-colors hover:border-[#D8B79A]/40 hover:text-[#D8B79A]"
               >
-                CHECK MY CV
+                View My CV
                 <Eye size={14} className="transition-transform group-hover:scale-105" />
               </a>
             </motion.div>
@@ -213,7 +217,7 @@ export function Hero({ isParentLoading = false }: HeroProps) {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={isParentLoading ? { opacity: 0, scale: 0.95 } : { opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.5 }}
-              onClick={() => setIsImgActive(!isImgActive)}
+              onClick={() => setIsImgActive((prev) => !prev)}
               className="relative select-none group w-full max-w-[260px] sm:max-w-[300px] aspect-[4/5] cursor-pointer"
             >
               <div className={`absolute inset-0 rounded-2xl border-2 border-[#D8B79A]/30 transition-all duration-300 ease-out 

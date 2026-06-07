@@ -72,58 +72,56 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Column 2: FRONT-END STACK */}
-          <div className="md:col-span-3">
-            <p className="font-ui text-[11px] uppercase tracking-[0.25em] text-[#D8B79A] font-bold">
-              Front-end
-            </p>
-            {/* TUNATUMIA FONT-UI, TEXT-[11px], UPPERCASE, TRACKING-WIDE KAMA IMPRINT */}
-            <ul className="mt-5 space-y-3.5 font-ui text-[11px] uppercase tracking-[0.2em] text-[#94A3B8]">
-              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] transition-colors">
-                <div className="w-4 h-4 flex items-center justify-center">{icons.react}</div>
-                <span>React / Next.js</span>
-              </li>
-              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] transition-colors">
-                <div className="w-4 h-4 flex items-center justify-center">{icons.ts}</div>
-                <span>TypeScript</span>
-              </li>
-              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] transition-colors">
-                <div className="w-4 h-4 flex items-center justify-center">{icons.tailwind}</div>
-                <span>Tailwind CSS</span>
-              </li>
-              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] transition-colors">
-                <div className="w-4 h-4 flex items-center justify-center">{icons.js}</div>
-                <span>Vanilla JavaScript</span>
-              </li>
-            </ul>
-          </div>
+        {/* Column 2: FRONT-END STACK */}
+<div className="md:col-span-3">
+  <p className="font-mono text-[11px] text-[#D8B79A] font-bold">
+    Front-end
+  </p>
+  <ul className="mt-5 space-y-3.5 font-mono text-[11px]  text-[#F4F4F4]">
+    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+      <div className="w-4 h-4 flex items-center justify-center">{icons.react}</div>
+      <span>React / Next.js</span>
+    </li>
+    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+      <div className="w-4 h-4 flex items-center justify-center">{icons.ts}</div>
+      <span>TypeScript</span>
+    </li>
+    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+      <div className="w-4 h-4 flex items-center justify-center">{icons.tailwind}</div>
+      <span>Tailwind CSS</span>
+    </li>
+    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+      <div className="w-4 h-4 flex items-center justify-center">{icons.js}</div>
+      <span>Vanilla JavaScript</span>
+    </li>
+  </ul>
+</div>
 
-          {/* Column 3: BACK-END & FRAMEWORKS */}
-          <div className="md:col-span-4">
-            <p className="font-ui text-[11px] uppercase tracking-[0.25em] text-[#D8B79A] font-bold">
-              Back-end &amp; Frameworks
-            </p>
-            {/* TUNATUMIA FONT-UI, TEXT-[11px], UPPERCASE, TRACKING-WIDE KAMA IMPRINT */}
-            <ul className="mt-5 space-y-3.5 font-ui text-[11px] uppercase tracking-[0.2em] text-[#94A3B8]">
-              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] transition-colors">
-                <div className="w-4 h-4 flex items-center justify-center">{icons.csharp}</div>
-                <span>C# / .NET Core</span>
-              </li>
-              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] transition-colors">
-                <div className="w-4 h-4 flex items-center justify-center">{icons.net}</div>
-                <span>ASP.NET MVC / Web API</span>
-              </li>
-              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] transition-colors">
-                <div className="w-4 h-4 flex items-center justify-center">{icons.node}</div>
-                <span>Node.js / Express</span>
-              </li>
-              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] transition-colors">
-                <div className="w-4 h-4 flex items-center justify-center">{icons.database}</div>
-                <span>PostgreSQL / SQL Server</span>
-              </li>
-            </ul>
-          </div>
-
+{/* Column 3: BACK-END & FRAMEWORKS */}
+<div className="md:col-span-4">
+  <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-[#D8B79A] font-bold">
+    Back-end &amp; Frameworks
+  </p>
+  <ul className="mt-5 space-y-3.5 font-mono text-[11px] text-[#F4F4F4]">
+    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+      <div className="w-4 h-4 flex items-center justify-center">{icons.csharp}</div>
+      <span>C# / .NET Core</span>
+    </li>
+    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+      <div className="w-4 h-4 flex items-center justify-center">{icons.net}</div>
+      <span>ASP.NET MVC / Web API</span>
+    </li>
+    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+      <div className="w-4 h-4 flex items-center justify-center">{icons.node}</div>
+      <span>Node.js / Express</span>
+    </li>
+    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+      <div className="w-4 h-4 flex items-center justify-center">{icons.database}</div>
+      <span>PostgreSQL / SQL Server</span>
+    </li>
+  </ul>
+</div>
+            
         </div>
 
         {/* LOWER FOOTER */}

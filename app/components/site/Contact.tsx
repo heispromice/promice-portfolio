@@ -69,13 +69,13 @@ export function Contact() {
         <div className="border-t border-white/[0.04] pt-16 md:pt-24 w-full">
           
           <ScrollReveal>
-            <SectionLabel index="— Connection" title="Start a conversation." />
+            <SectionLabel index="— Contact" title="Start a conversation." />
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.05}>
             <h2 className="mt-6 max-w-xl font-semibold text-[18px] leading-relaxed tracking-normal text-[#F4F4F4] sm:text-[20px] md:text-2xl">
               If you are planning a system that needs clarity, reliability, and long-term value, I would be glad to help build it.{" "}
-              <span className="text-[#94A3B8]">Building reliable software for education, business, and public safety.</span>
+              <span className="text-[#94A3B8]">I build reliable software for education, business, and public safety</span>
               <span className="text-[#D8B79A]">.</span>
             </h2>
           </ScrollReveal>
@@ -88,7 +88,7 @@ export function Contact() {
               
               <div className="space-y-4 max-w-xl w-full">
                 <ScrollReveal direction="up" delay={0.1}>
-                  <p className="font-sans text-[10px] uppercase tracking-[0.25em] text-[#F4F4F4] font-bold">
+                  <p className="font-sans text-[10px] uppercase tracking-[0.25em] text-[#94A3B8] font-bold">
                     Direct Engagement
                   </p>
                 </ScrollReveal>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { FolderGit2, ExternalLink, Database, Cpu } from "lucide-react";
+import { FolderGit2, Smartphone, ShieldCheck, ExternalLink } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function Projects() {
@@ -12,25 +12,25 @@ export function Projects() {
 
   const projectList = [
     {
+      title: "Salama SOS Emergency App",
+      description: "A mobile emergency response application designed to send instant SOS alerts, broadcast real-time GPS location coordinates, and establish immediate links to trusted networks.",
+      stack: ["React Native", "GPS Tracking", "Emergency Alerts", "Real-Time Location"],
+      icon: <Smartphone size={20} className="text-[#D8B79A]" />,
+      gitHubUrl: "https://github.com/heispromice",
+    },
+    {
+      title: "School Website Template",
+      description: "A comprehensive digital portal structured for national institutions, integrating streamlined systems for academic tracking, admissions processing, and parent communication.",
+      stack: ["Next.js", "Tailwind CSS", "CMS Ready", "School Portal"],
+      icon: <ShieldCheck size={20} className="text-[#D8B79A]" />,
+      gitHubUrl: "https://github.com/heispromice",
+    },
+    {
       title: "EduRecord Digital System",
-      description: "A school records platform for managing student data, documents, and access control in one place.",
-      stack: ["Next.js", "Tailwind CSS", "PostgreSQL", "Prisma ORM"],
+      description: "A performance-tuned records management platform built to centralize student profiles, secure academic documentation, and enforce rigorous multi-tenant access controls.",
+      stack: ["Next.js", "PostgreSQL", "Prisma ORM", "Access Control"],
       icon: <FolderGit2 size={20} className="text-[#D8B79A]" />,
-      liveUrl: "#",
-    },
-    {
-      title: "Pulse Finance Dashboard",
-      description: "A finance dashboard for tracking transactions, reconciling data, and giving teams a clearer view of financial activity without relying on spreadsheets.",
-      stack: ["React", "TypeScript", "PostgreSQL"],
-      icon: <Database size={20} className="text-[#D8B79A]"/>,
-      liveUrl: "#",
-    },
-    {
-      title: "Hifadhi Records Architecture",
-      description: "A secure records management system for scanning, organizing, and retrieving important documents with audit-friendly storage and access control.",
-      stack: ["TypeScript", "PostgreSQL", "AWS S3", "Tesseract Engine"],
-      icon: <Cpu size={20} className="text-[#D8B79A]" />,
-      liveUrl: "#",
+      gitHubUrl: "https://github.com/heispromice",
     },
   ];
 
@@ -46,7 +46,6 @@ export function Projects() {
     return () => observer.disconnect();
   }, []);
 
-  // MATRIX MATH ENGINE: Amplified vector chains for core scientific visualization
   useEffect(() => {
     if (!isInView || !canvasRef.current) return;
     const canvas = canvasRef.current;
@@ -57,7 +56,6 @@ export function Projects() {
     let width = (canvas.width = canvas.parentElement?.clientWidth || 700);
     let height = (canvas.height = canvas.parentElement?.clientHeight || 500);
 
-    // SCIENTIFIC OVERHAUL: Increased point matrix density to generate heavier cyber links
     const numPoints = 160; 
     const points: { x: number; y: number; z: number }[] = [];
     const radius = Math.min(width, height) * 0.46;
@@ -72,7 +70,7 @@ export function Projects() {
       });
     }
 
-    let angleX = 0.0008; // Ultra-slow elegant rotational physics
+    let angleX = 0.0008; 
     let angleY = 0.0012;
 
     function render() {
@@ -84,8 +82,8 @@ export function Projects() {
       const cosY = Math.cos(angleY);
       const sinY = Math.sin(angleY);
 
-      ctx.fillStyle = "rgba(216, 183, 154, 0.35)"; // Crisp distinct gold planetary nodes
-      ctx.strokeStyle = "rgba(226, 232, 240, 0.12)"; // High contrast Silver/Slate architectural grid links
+      ctx.fillStyle = "rgba(216, 183, 154, 0.35)"; 
+      ctx.strokeStyle = "rgba(226, 232, 240, 0.12)"; 
       ctx.lineWidth = 0.85;
 
       const projectedPoints = points.map((p) => {
@@ -102,7 +100,6 @@ export function Projects() {
         return { x: x2 * k + width / 2, y: y1 * k + height / 2, opacity: k };
       });
 
-      // CHAIN MAKER: Expanded proximity thresholds to catch more nodes into polygons
       for (let i = 0; i < projectedPoints.length; i++) {
         for (let j = i + 1; j < projectedPoints.length; j++) {
           const dist = Math.hypot(projectedPoints[i].x - projectedPoints[j].x, projectedPoints[i].y - projectedPoints[j].y);
@@ -140,18 +137,23 @@ export function Projects() {
         
         {/* Section Heading Layout */}
         <ScrollReveal>
-          <div className="flex items-center gap-4">
-            <span className="font-bold text-xs uppercase tracking-[0.25em] text-[#D8B79A] whitespace-nowrap">
-              Considered Output
-            </span>
-            <div className="h-[1px] w-full bg-white/10" />
+          <div className="space-y-3">
+            <div className="flex items-center gap-4">
+              <span className="font-bold text-xs uppercase tracking-[0.25em] text-[#D8B79A] whitespace-nowrap">
+                Selected Projects
+              </span>
+              <div className="h-[1px] w-full bg-white/10" />
+            </div>
+            <p className="text-sm font-sans text-[#94A3B8] max-w-2xl leading-relaxed">
+              A selection of systems I am building around education, public safety, records, and practical digital infrastructure.
+            </p>
           </div>
         </ScrollReveal>
 
-        {/* CARDS CONTAINER HOUSING */}
+        {/* Card View Track Bounds */}
         <div className="relative p-1 md:p-4 rounded-3xl">
           
-          {/* THE SCIENTIFIC MATRIX BACKGROUND: Preserved perfectly within layout bounds */}
+          {/* Scientific Matrix Asset Background */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-3xl">
             <div className="absolute w-[800px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 bg-[conic-gradient(from_0deg,#D8B79A,#0B0F19,#38BDF8,#111625,#D8B79A)] blur-[120px] animate-[spin_50s_linear_infinite]" />
             
@@ -163,7 +165,7 @@ export function Projects() {
             </div>
           </div>
 
-          {/* RESPONSIVE GRID MATRIX WITH SCROLL REVEAL */}
+          {/* Responsive Layout Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr relative z-20">
             {projectList.map((project, index) => (
               <ScrollReveal key={project.title} delay={index * 0.15} direction="up">
@@ -182,13 +184,14 @@ export function Projects() {
                         {project.icon}
                       </div>
                       
-                      {project.liveUrl && (
+                      {project.gitHubUrl && (
                         <a
-                          href={project.liveUrl}
+                          href={project.gitHubUrl}
                           target="_blank"
                           rel="noreferrer"
                           className="p-2 text-[#94A3B8] hover:text-[#D8B79A] transition-colors"
-                          aria-label={`View live implementation of ${project.title}`}
+                          title="View on GitHub"
+                          aria-label={`View ${project.title} on GitHub`}
                         >
                           <ExternalLink size={16} />
                         </a>
