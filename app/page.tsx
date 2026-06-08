@@ -27,19 +27,43 @@ export default function Home() {
   }, [isLoading]);
 
   const jsonLd = {
-    "@context": "https://schema.org",
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  name: "Fredrick N. Claudi Portfolio",
+  url: "https://www.fredrickclaudi.com",
+  mainEntity: {
     "@type": "Person",
-    "name": "Fredrick N. Claudi",
-    "url": "https://www.fredrickclaudi.com",
-    "email": "heispromice@gmail.com",
-    "jobTitle": "Software Developer & Business Information Systems Graduate",
-    "sameAs": [
+    "@id": "https://www.fredrickclaudi.com/#person",
+    name: "Fredrick N. Claudi",
+    alternateName: ["Fredrick Claudi", "Fredrick", "promice", "Fredrick Cloud"],
+    url: "https://www.fredrickclaudi.com",
+    image: "https://www.fredrickclaudi.com/profile2.jpg",
+    email: "mailto:heispromice@gmail.com",
+    jobTitle: "Software Developer & Business Intelligence Analyst",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Dar es Salaam",
+      addressCountry: "TZ",
+    },
+    knowsAbout: [
+      "Full-Stack Web Development",
+      "Mobile Application Development",
+      "Business Intelligence",
+      "UI/UX Design",
+      "School Management Systems",
+      "Emergency Response Applications",
+      "React",
+      "Next.js",
+      "React Native",
+      "PostgreSQL",
+    ],
+    sameAs: [
       "https://github.com/heispromice",
       "https://tz.linkedin.com/in/fredrick-claudi-5a162230b",
-      "https://www.instagram.com/_heispromice"
-    ]
-  };
-
+      "https://www.instagram.com/_heispromice",
+        ],
+     },
+    };
   return (
     <>
       <script

@@ -13,7 +13,7 @@ export function Projects() {
   const projectList = [
     {
       title: "Salama SOS Emergency App",
-      description: "A mobile emergency response application designed to send instant SOS alerts, broadcast real-time GPS location coordinates, and establish immediate links to trusted networks.",
+      description: "A mobile emergency response application designed to send instant SOS alerts, broadcast real-time GPS location coordinates, and establish immediate links to trusted contacts.",
       stack: ["React Native", "GPS Tracking", "Emergency Alerts", "Real-Time Location"],
       icon: <Smartphone size={20} className="text-[#D8B79A]" />,
       gitHubUrl: "https://github.com/heispromice",

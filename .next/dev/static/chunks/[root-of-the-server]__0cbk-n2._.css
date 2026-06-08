@@ -1974,6 +1974,10 @@
     padding-top: calc(var(--spacing) * 6);
   }
 
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
+  }
+
   .pt-16 {
     padding-top: calc(var(--spacing) * 16);
   }
@@ -1984,6 +1988,10 @@
 
   .pr-2 {
     padding-right: calc(var(--spacing) * 2);
+  }
+
+  .pb-0 {
+    padding-bottom: calc(var(--spacing) * 0);
   }
 
   .pb-1 {
@@ -2233,11 +2241,6 @@
 
   .text-\[\#F4F4F4\] {
     color: #f4f4f4;
-  }
-
-  .text-\[\#F4F4F4\]\/80 {
-    color: #f4f4f4cc;
-    color: lab(96.1898% -.0000298023 .0000119209 / .8);
   }
 
   .text-\[\#F4F4F4\]\/90 {
@@ -2917,6 +2920,12 @@
   }
 
   @media (min-width: 48rem) {
+    .md\:pt-16 {
+      padding-top: calc(var(--spacing) * 16);
+    }
+  }
+
+  @media (min-width: 48rem) {
     .md\:pt-20 {
       padding-top: calc(var(--spacing) * 20);
     }
@@ -2925,6 +2934,24 @@
   @media (min-width: 48rem) {
     .md\:pt-24 {
       padding-top: calc(var(--spacing) * 24);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:pt-32 {
+      padding-top: calc(var(--spacing) * 32);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:pb-0 {
+      padding-bottom: calc(var(--spacing) * 0);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:pb-6 {
+      padding-bottom: calc(var(--spacing) * 6);
     }
   }
 

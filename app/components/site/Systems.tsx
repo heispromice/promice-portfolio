@@ -10,11 +10,11 @@ export function Systems() {
   const [open, setOpen] = useState(false);
 
   return (
-    <section id="systems" className="py-24 md:py-32 border-b border-white/[0.02]">
+    <section id="systems" className="pt-12 pb-0 md:pt-16 md:pb-0 border-b border-white/[0.02]">
       <div className="container-pro">
         <ScrollReveal>
           <div className="flex items-center gap-3 font-bold text-xs uppercase tracking-[0.25em] text-[#94A3B8]">
-            <span className="text-[#D8B79A]"> — Systems</span>
+            <span className="text-[#D8B79A]"> — Archive</span>
           </div>
         </ScrollReveal>
 
@@ -22,7 +22,7 @@ export function Systems() {
           <div className="mt-8 flex flex-col gap-6 rounded-[24px] border border-white/5 bg-white/[0.01] p-6 md:p-10 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
               <h2 className="mt-6 max-w-xl font-semibold text-[18px] leading-relaxed tracking-normal text-[#F4F4F4] sm:text-[20px] md:text-2xl">
-                Browse earlier projects, technical experiments, and background records.
+                A collection of earlier builds, experiments, learning projects, and technical notes.
               </h2>
               <p className="mt-4 max-w-xl text-[14px] leading-7 text-[#94A3B8]">
                 Click to reveal the archive portal containing historical design systems, career documentation, and background records.

@@ -68,13 +68,16 @@ export function Footer() {
             </div>
 
             <p className="max-w-md font-sans text-[15px] leading-relaxed text-[#F4F4F4]/90">
-              Fredrick N. Claudi. Building reliable web and mobile software for education, business, and public safety.
+              I build reliable web and mobile software for education, business, and public safety.
+            </p>
+            <p className="max-w-md font-sans text-[15px] leading-relaxed text-[#F4F4F4]/90">
+              I work across the following technologies.
             </p>
           </div>
 
         {/* Column 2: FRONT-END STACK */}
 <div className="md:col-span-3">
-  <p className="font-mono text-[11px] text-[#D8B79A] font-bold">
+  <p className="font-mono text-[12px] uppercase tracking-[0.25em] text-[#D8B79A] font-bold">
     Front-end
   </p>
   <ul className="mt-5 space-y-3.5 font-mono text-[11px]  text-[#F4F4F4]">
@@ -99,7 +102,7 @@ export function Footer() {
 
 {/* Column 3: BACK-END & FRAMEWORKS */}
 <div className="md:col-span-4">
-  <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-[#D8B79A] font-bold">
+  <p className="font-mono text-[12px] uppercase tracking-[0.25em] text-[#D8B79A] font-bold">
     Back-end &amp; Frameworks
   </p>
   <ul className="mt-5 space-y-3.5 font-mono text-[11px] text-[#F4F4F4]">

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, MapPin } from "lucide-react";
 import { SectionLabel } from "./SectionLabel";
 import { ScrollReveal } from "./ScrollReveal";
 
@@ -99,13 +99,13 @@ export function Contact() {
                       Whether you need a new platform, a cleaner backend, or help turning a complex workflow into a simple digital product, I build with clarity, structure, and long-term maintainability in mind. 
                     </p>
                     <p>
-                      I prefer direct communication, thoughtful planning, and work that is technically sound. If the brief is clear, I will turn it into something practical and well built.
+                      Have a school, business, or public-service workflow that needs a reliable digital system? I’d be glad to help shape it and build it.
                     </p>
                   </div>
                 </ScrollReveal>
               </div>
 
-              {/* DUAL BUTTON CTAs: Removed className from ScrollReveal to fix TS error */}
+              {/* DUAL BUTTON CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 max-w-xl w-full">
                 {directContactLinks.map((contact, index) => {
                   return (
@@ -121,7 +121,7 @@ export function Contact() {
                         }`}
                       >
                         {contact.icon}
-                        {contact.label === "Email" ? "Drop an Email Directly" : "Schedule a Tech Consultation"}
+                        {contact.label === "Email" ? "Drop an Email" : "Say Hello"}
                       </a>
                     </ScrollReveal>
                   );
@@ -130,7 +130,7 @@ export function Contact() {
 
             </div>
 
-            {/* RIGHT COLUMN: Elsewhere Social Links */}
+            {/* RIGHT COLUMN: Elsewhere Social Links & Location */}
             <div className="lg:col-span-6 w-full min-w-0 lg:pl-6">
               <ScrollReveal delay={0.25}>
                 <p className="font-sans text-[10px] uppercase tracking-[0.25em] text-[#94A3B8] font-bold">
@@ -159,6 +159,23 @@ export function Contact() {
                     </li>
                   </ScrollReveal>
                 ))}
+
+                {/* Static Location Entry Matching the Layout Architecture */}
+                <ScrollReveal delay={0.3 + elsewhereSocials.length * 0.05} direction="up">
+                  <li>
+                    <div className="flex items-center justify-between border-b border-white/[0.04] py-4 text-[#F4F4F4] w-full select-none">
+                      <span className="flex items-center gap-3 min-w-0">
+                        <span className="text-[#94A3B8] flex-shrink-0">
+                          <MapPin size={18} className="stroke-2" />
+                        </span>
+                        <span className="font-sans text-[13px] tracking-wide truncate">Location</span>
+                      </span>
+                      <span className="font-sans text-[13px] text-[#94A3B8] font-medium flex items-center gap-2 flex-shrink-0">
+                        Dar es Salaam, TZ
+                      </span>
+                    </div>
+                  </li>
+                </ScrollReveal>
               </ul>
             </div>
 

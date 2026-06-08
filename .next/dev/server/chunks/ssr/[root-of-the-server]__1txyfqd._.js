@@ -111,16 +111,34 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$site$2f
 ;
 const metadata = {
     title: {
-        default: "Fredrick N. Claudi — Portfolio",
+        default: "Fredrick N. Claudi | Software Developer in Tanzania",
         template: "%s | Fredrick N. Claudi"
     },
-    description: "Professional portfolio of Fredrick N. Claudi, a Junior Software Developer and Business Information Systems Graduate specializing in Full-Stack Web Development, Mobile Application Development, and Business Intelligence.",
+    description: "Fredrick N. Claudi is a Tanzania-based software developer and business intelligence analyst building web, mobile, and data systems for education, business, and public safety.",
     keywords: [
         "Fredrick N. Claudi",
         "Fredrick Claudi",
+        "Fredrick",
+        "Fredrick Nasser",
+        "Nasser Claudi",
+        "Fredrick Nasser Claudi",
+        "Claudi Fredrick",
+        "Fredrick Cloud",
+        "Fredrick Nassar",
+        "promise",
+        "promice",
+        "React Native Developer",
+        "Next.js Developer",
         "Software Developer",
         "Business Information Systems",
         "Portfolio",
+        "School Website Developer Tanzania",
+        "Emergency App Developer Tanzania",
+        "UI/UX Designer",
+        "IT consultant in Tanzania",
+        "Premium Web Designs in Tanzania",
+        "Freelancer in Tanzania",
+        "Software Developer Freelancer in Tanzania",
         "Tanzania",
         "Full-Stack Web Development",
         "Business Intelligence Analyst",
@@ -145,22 +163,22 @@ const metadata = {
         type: "website",
         locale: "en_US",
         url: "https://www.fredrickclaudi.com",
-        title: "Fredrick N. Claudi — Portfolio",
+        title: "Fredrick N. Claudi | Web, Mobile & Data Systems Developer in Tanzania",
         description: "Professional portfolio of Fredrick N. Claudi, specializing in Full-Stack Web Development, Mobile Applications, and Business Intelligence.",
-        siteName: "Fredrick N. Claudi Portfolio",
+        siteName: "Fredrick N. Claudi",
         images: [
             {
                 url: "/profile2.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Fredrick N. Claudi"
+                alt: "Fredrick N. Claudi - Software Developer in Tanzania"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "Fredrick N. Claudi — Portfolio",
-        description: "Professional portfolio of Fredrick N. Claudi, specializing in Full-Stack Web Development, Mobile Applications, and Business Intelligence.",
+        title: "Fredrick N. Claudi | Software Developer in Tanzania",
+        description: "Building web, mobile, and data systems for education, business, and public safety.",
         images: [
             "/profile2.jpg"
         ]
@@ -186,7 +204,7 @@ function RootLayout({ children }) {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$site$2f$MouseGlow$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["MouseGlow"], {}, void 0, false, {
                     fileName: "[project]/app/layout.tsx",
-                    lineNumber: 89,
+                    lineNumber: 107,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -194,18 +212,18 @@ function RootLayout({ children }) {
                     children: children
                 }, void 0, false, {
                     fileName: "[project]/app/layout.tsx",
-                    lineNumber: 92,
+                    lineNumber: 110,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/layout.tsx",
-            lineNumber: 86,
+            lineNumber: 104,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 85,
+        lineNumber: 103,
         columnNumber: 5
     }, this);
 }
