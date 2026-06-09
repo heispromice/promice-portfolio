@@ -91,7 +91,7 @@ export function Hero({ isParentLoading = false }: HeroProps) {
               variants={itemVariants}
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-[11px] font-medium tracking-normal text-[#D8B79A]"
             >
-              <span>Hi, My name is,</span>
+              <span>Hi, My Name Is,</span>
             </motion.div>
 
             <div className="space-y-2">

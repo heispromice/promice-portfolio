@@ -1,6 +1,5 @@
 # Fredrick Portfolio — VS Code Ready
 
-This folder is a clean, VS Code-ready reconstruction of the Lovable prototype.
 
 ## Run locally
 

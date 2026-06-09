@@ -9,25 +9,25 @@ export function About() {
     {
       title: "Full-Stack Web Development",
       description: "Designing reliable end-to-end web applications with modern architectures and responsive UI layouts.",
-      skills: ["React", "Next.js", "Vite", "Node.js"],
+      skills: ["React", "Next.js", "TypeScript", "ASP .NET Core"],
       icon: <Code2 size={18} className="text-[#D8B79A]" />,
     },
     {
       title: "Mobile Application Development",
       description: "Building fast, high-performance cross-platform mobile experiences tailored for seamless native delivery.",
-      skills: ["React Native", "APIs", "Mobile UI"],
+      skills: ["React Native", "REST APIs", "Expo"],
       icon: <Smartphone size={18} className="text-[#D8B79A]" />,
     },
     {
       title: "Business Intelligence",
       description: "Structuring clean data pipelines and interactive analytical dashboards to extract operational insights.",
-      skills: ["SQL", "Dashboards", "Data Modeling"],
+      skills: ["SQL", "Power BI", "Excel", "Tableau"],
       icon: <BarChart3 size={18} className="text-[#D8B79A]" />,
     },
     {
       title: "ICT Consulting",
       description: "Advising on systems infrastructure, technical audits, secure deployments, and digital scaling blueprints.",
-      skills: ["Architecture", "Security", "IT Audits"],
+      skills: ["Systems Analysis", "Security", "Databases", "Digital Strategy"],
       icon: <ShieldCheck size={18} className="text-[#D8B79A]" />,
     },
   ];
@@ -50,7 +50,7 @@ export function About() {
           <div className="space-y-6 font-sans text-[15px] sm:text-[16px] leading-relaxed text-[#F4F4F4]/90">
             <ScrollReveal delay={0.1}>
               <p>
-                I’m Fredrick Claudi, a software developer building practical digital systems for schools, businesses, and public-service workflows.
+                I’m Fredrick Claudi, a software developer focused on building reliable software systems for schools, businesses, and public-service organizations.
                 My work focuses on web platforms, mobile applications, records systems, dashboards, and tools that help people manage information more clearly and work more efficiently.
               </p>
             </ScrollReveal>
