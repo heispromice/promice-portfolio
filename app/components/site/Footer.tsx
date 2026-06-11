@@ -175,13 +175,13 @@ export function Footer() {
               <p className="text-sm font-semibold text-[#F4F4F4]">Information according to § 5 TMG / Legal Responsibility:</p>
               <div>
                 <p className="text-[#F4F4F4] font-medium">Fredrick N. Claudi</p>
-                <p>Independent Solutions Provider & Systems Architect</p>
+                <p>Independent Software Developer & BI Analyst</p>
                 <p>Dar es Salaam, Tanzania</p>
               </div>
               <div>
                 <p className="text-[#F4F4F4] font-medium">Contact Information:</p>
                 <p>Email: heispromice@gmail.com</p>
-                <p>Systems Domain: promice.dev</p>
+                <p>Systems Domain: fredrickclaudi.com</p>
               </div>
               <p className="border-t border-white/[0.03] pt-4 text-[11px] italic">
                 Disclaimer: The content provided on this portfolio represents proprietary architectural frameworks and project representations. Unauthorized duplication is strictly monitored.
@@ -206,11 +206,11 @@ export function Footer() {
             <div className="mt-6 max-h-[60vh] overflow-y-auto pr-2 space-y-4 font-sans text-xs leading-relaxed text-[#94A3B8]">
               <p className="text-sm font-semibold text-[#F4F4F4]">Data Protection Architecture</p>
               <p>
-                As a systems engineer, data integrity and privacy are wired into my philosophy. This portfolio platform does not deploy tracking scripts, third-party analytical cookies, or pixel harvesting pipelines.
+                As a software developer, data integrity and privacy are wired into my philosophy. This portfolio platform does not deploy tracking scripts, third-party analytical cookies, or pixel harvesting pipelines.
               </p>
               <div>
                 <p className="text-[#F4F4F4] font-medium">1. Connection Data</p>
-                <p>When you interact with the direct CTAs (WhatsApp or Email), your transmission follows standard TLS/SSL encrypted protocols natively handled by your respective device clients.</p>
+                <p>When you interact with the direct CTAs (WhatsApp, Phone call or Email), your transmission follows standard TLS/SSL encrypted protocols natively handled by your respective device clients.</p>
               </div>
               <div>
                 <p className="text-[#F4F4F4] font-medium">2. Client Logging</p>
