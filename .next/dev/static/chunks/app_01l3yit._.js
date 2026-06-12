@@ -1224,7 +1224,7 @@ function Hero({ isParentLoading = false }) {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "lg:col-span-5 order-2 flex justify-start w-full pt-4 lg:pt-0",
+                            className: "lg:col-span-5 order-2 flex justify-start w-full pt-4 lg:pt-0 select-none",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                 initial: {
                                     opacity: 0,
@@ -1241,50 +1241,54 @@ function Hero({ isParentLoading = false }) {
                                     duration: 0.7,
                                     delay: 0.5
                                 },
-                                onClick: ()=>setIsImgActive((prev)=>!prev),
-                                className: "relative select-none group w-full max-w-[260px] sm:max-w-[300px] aspect-[4/5] cursor-pointer",
+                                onClick: (e)=>{
+                                    e.preventDefault();
+                                    setIsImgActive((prev)=>!prev);
+                                },
+                                // Tofauti ya desktop hover na mobile tap:
+                                className: "relative group w-full max-w-[260px] sm:max-w-[300px] aspect-[4/5] cursor-pointer touch-manipulation",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: `absolute inset-0 rounded-2xl border-2 border-[#D8B79A]/30 transition-all duration-300 ease-out 
-                ${isImgActive ? "translate-x-[22px] translate-y-[22px] border-[#D8B79A]" : "translate-x-[16px] translate-y-[16px] group-hover:translate-x-[22px] group-hover:translate-y-[22px] group-hover:border-[#D8B79A]"}`
+                                        className: `absolute inset-0 rounded-2xl border-2 transition-all duration-300 ease-out pointer-events-none
+      ${isImgActive ? "translate-x-[22px] translate-y-[22px] border-[#D8B79A]" : "translate-x-[16px] translate-y-[16px] border-[#D8B79A]/30 lg:group-hover:translate-x-[22px] lg:group-hover:translate-y-[22px] lg:group-hover:border-[#D8B79A]"}`
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/site/Hero.tsx",
-                                        lineNumber: 208,
+                                        lineNumber: 213,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: `relative w-full h-full rounded-2xl overflow-hidden bg-[#0B0F19] border border-white/[0.08] shadow-2xl transition-all duration-300 ease-out 
-                ${isImgActive ? "-translate-x-1 -translate-y-1" : "group-hover:-translate-x-1 group-hover:-translate-y-1"}`,
+                                        className: `relative w-full h-full rounded-2xl overflow-hidden bg-[#0B0F19] border border-white/[0.08] shadow-2xl transition-all duration-300 ease-out pointer-events-none
+      ${isImgActive ? "-translate-x-1 -translate-y-1" : "lg:group-hover:-translate-x-1 lg:group-hover:-translate-y-1"}`,
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                                 src: "/profile2.jpg",
                                                 alt: "Fredrick N. Claudi",
-                                                className: `w-full h-full object-cover transition-all duration-300 ease-out
-                    ${isImgActive ? "filter-none opacity-100 mix-blend-normal" : "grayscale opacity-75 mix-blend-luminosity group-hover:filter-none group-hover:opacity-100 group-hover:mix-blend-normal"}`
+                                                className: `w-full h-full object-cover transition-all duration-300 ease-out pointer-events-none
+          ${isImgActive ? "filter-none opacity-100 mix-blend-normal" : "grayscale opacity-75 mix-blend-luminosity lg:group-hover:filter-none lg:group-hover:opacity-100 lg:group-hover:mix-blend-normal"}`
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Hero.tsx",
-                                                lineNumber: 221,
+                                                lineNumber: 227,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: `absolute inset-0 bg-[#D8B79A]/10 mix-blend-multiply transition-opacity duration-500 pointer-events-none 
-                  ${isImgActive ? "opacity-0" : "group-hover:opacity-0"}`
+        ${isImgActive ? "opacity-0" : "lg:group-hover:opacity-0"}`
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Hero.tsx",
-                                                lineNumber: 230,
+                                                lineNumber: 238,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "absolute inset-0 bg-gradient-to-t from-[#0B0F19]/60 via-transparent to-transparent pointer-events-none"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Hero.tsx",
-                                                lineNumber: 233,
+                                                lineNumber: 241,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/site/Hero.tsx",
-                                        lineNumber: 215,
+                                        lineNumber: 221,
                                         columnNumber: 15
                                     }, this)
                                 ]
@@ -1319,7 +1323,7 @@ function Hero({ isParentLoading = false }) {
                                     children: "Explore Systems"
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                    lineNumber: 245,
+                                    lineNumber: 253,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1333,19 +1337,19 @@ function Hero({ isParentLoading = false }) {
                                             size: 14
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/site/Hero.tsx",
-                                            lineNumber: 246,
+                                            lineNumber: 254,
                                             columnNumber: 249
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                    lineNumber: 246,
+                                    lineNumber: 254,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/site/Hero.tsx",
-                            lineNumber: 239,
+                            lineNumber: 247,
                             columnNumber: 11
                         }, this)
                     ]

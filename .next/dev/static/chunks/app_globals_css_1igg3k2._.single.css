@@ -1133,6 +1133,10 @@
     cursor: pointer;
   }
 
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
   .auto-rows-fr {
     grid-auto-rows: minmax(0, 1fr);
   }
@@ -2325,22 +2329,8 @@
   }
 
   @media (hover: hover) {
-    .group-hover\:-translate-x-1:is(:where(.group):hover *) {
-      --tw-translate-x: calc(var(--spacing) * -1);
-      translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
-  }
-
-  @media (hover: hover) {
     .group-hover\:translate-x-0\.5:is(:where(.group):hover *) {
       --tw-translate-x: calc(var(--spacing) * .5);
-      translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:translate-x-\[22px\]:is(:where(.group):hover *) {
-      --tw-translate-x: 22px;
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
@@ -2353,31 +2343,11 @@
   }
 
   @media (hover: hover) {
-    .group-hover\:-translate-y-1:is(:where(.group):hover *) {
-      --tw-translate-y: calc(var(--spacing) * -1);
-      translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:translate-y-\[22px\]:is(:where(.group):hover *) {
-      --tw-translate-y: 22px;
-      translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
-  }
-
-  @media (hover: hover) {
     .group-hover\:scale-105:is(:where(.group):hover *) {
       --tw-scale-x: 105%;
       --tw-scale-y: 105%;
       --tw-scale-z: 105%;
       scale: var(--tw-scale-x) var(--tw-scale-y);
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:border-\[\#D8B79A\]:is(:where(.group):hover *) {
-      border-color: #d8b79a;
     }
   }
 
@@ -2415,34 +2385,10 @@
   }
 
   @media (hover: hover) {
-    .group-hover\:opacity-0:is(:where(.group):hover *) {
-      opacity: 0;
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:opacity-100:is(:where(.group):hover *) {
-      opacity: 1;
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:mix-blend-normal:is(:where(.group):hover *) {
-      mix-blend-mode: normal;
-    }
-  }
-
-  @media (hover: hover) {
     .group-hover\:drop-shadow-\[0_0_8px_rgba\(216\,183\,154\,0\.25\)\]:is(:where(.group):hover *) {
       --tw-drop-shadow-size: drop-shadow(0 0 8px var(--tw-drop-shadow-color, #d8b79a40));
       --tw-drop-shadow: var(--tw-drop-shadow-size);
       filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:filter-none:is(:where(.group):hover *) {
-      filter: none;
     }
   }
 
@@ -2939,6 +2885,82 @@
   @media (min-width: 64rem) {
     .lg\:text-\[18px\] {
       font-size: 18px;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    @media (hover: hover) {
+      .lg\:group-hover\:-translate-x-1:is(:where(.group):hover *) {
+        --tw-translate-x: calc(var(--spacing) * -1);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+
+  @media (min-width: 64rem) {
+    @media (hover: hover) {
+      .lg\:group-hover\:translate-x-\[22px\]:is(:where(.group):hover *) {
+        --tw-translate-x: 22px;
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+
+  @media (min-width: 64rem) {
+    @media (hover: hover) {
+      .lg\:group-hover\:-translate-y-1:is(:where(.group):hover *) {
+        --tw-translate-y: calc(var(--spacing) * -1);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+
+  @media (min-width: 64rem) {
+    @media (hover: hover) {
+      .lg\:group-hover\:translate-y-\[22px\]:is(:where(.group):hover *) {
+        --tw-translate-y: 22px;
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+
+  @media (min-width: 64rem) {
+    @media (hover: hover) {
+      .lg\:group-hover\:border-\[\#D8B79A\]:is(:where(.group):hover *) {
+        border-color: #d8b79a;
+      }
+    }
+  }
+
+  @media (min-width: 64rem) {
+    @media (hover: hover) {
+      .lg\:group-hover\:opacity-0:is(:where(.group):hover *) {
+        opacity: 0;
+      }
+    }
+  }
+
+  @media (min-width: 64rem) {
+    @media (hover: hover) {
+      .lg\:group-hover\:opacity-100:is(:where(.group):hover *) {
+        opacity: 1;
+      }
+    }
+  }
+
+  @media (min-width: 64rem) {
+    @media (hover: hover) {
+      .lg\:group-hover\:mix-blend-normal:is(:where(.group):hover *) {
+        mix-blend-mode: normal;
+      }
+    }
+  }
+
+  @media (min-width: 64rem) {
+    @media (hover: hover) {
+      .lg\:group-hover\:filter-none:is(:where(.group):hover *) {
+        filter: none;
+      }
     }
   }
 }

@@ -1,7 +1,4 @@
-{"timestamp":"00:00:07.321","source":"Server","level":"WARN","message":"⚠ Slow filesystem detected. The benchmark took 476ms. If /home/promice/projects/.next/dev is a network drive, consider moving it to a local folder.\nSee more: https://nextjs.org/docs/app/guides/local-development"}
-{"timestamp":"00:00:15.172","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:18.198","source":"Server","level":"LOG","message":"○ Compiling / ..."}
-{"timestamp":"00:00:49.957","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
-{"timestamp":"00:14:34.511","source":"Server","level":"LOG","message":"✓ Compiled in 14.6s"}
-{"timestamp":"00:14:35.414","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
-{"timestamp":"00:22:02.607","source":"Server","level":"LOG","message":"✓ Compiled in 733ms"}
+{"timestamp":"00:00:10.981","source":"Server","level":"WARN","message":"⚠ Slow filesystem detected. The benchmark took 635ms. If /home/promice/projects/.next/dev is a network drive, consider moving it to a local folder.\nSee more: https://nextjs.org/docs/app/guides/local-development"}
+{"timestamp":"00:00:27.032","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:30.060","source":"Server","level":"LOG","message":"○ Compiling / ..."}
+{"timestamp":"00:00:46.337","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
