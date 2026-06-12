@@ -725,10 +725,6 @@
     position: relative;
   }
 
-  .static {
-    position: static;
-  }
-
   .-inset-\[10px\] {
     inset: -10px;
   }
@@ -2938,20 +2934,8 @@
   }
 
   @media (min-width: 48rem) {
-    .md\:pt-32 {
-      padding-top: calc(var(--spacing) * 32);
-    }
-  }
-
-  @media (min-width: 48rem) {
     .md\:pb-0 {
       padding-bottom: calc(var(--spacing) * 0);
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:pb-6 {
-      padding-bottom: calc(var(--spacing) * 6);
     }
   }
 

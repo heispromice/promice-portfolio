@@ -99,8 +99,42 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Fredrick N. Claudi",
+    "jobTitle": "Business Intelligence Analyst & Software Developer",
+    "url": "https://www.fredrickclaudi.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dar es Salaam",
+      "addressCountry": "TZ"
+    },
+    "sameAs": [
+      "https://github.com/heispromice",
+      "https://www.linkedin.com/in/fredrick-claudi-5a162230b"
+    ],
+    "knowsAbout": [
+      "Software Development",
+      "Business Intelligence",
+      "SQL",
+      "Tableau",
+      "Full Stack Web Development",
+      "Next.js",
+      "C# Programming",
+      "Data Analytics",
+      "System Architecture"
+    ]
+  };
+
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} bg-[#0B0F19] text-[#F4F4F4] antialiased overflow-x-hidden relative selection:bg-[#D8B79A]/20 selection:text-[#D8B79A]`}>
         
         {/* Global ambient background tracker component */}

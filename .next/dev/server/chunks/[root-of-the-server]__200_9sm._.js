@@ -44,16 +44,15 @@ module.exports = mod;
 "[project]/app/manifest.ts [app-route] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// app/manifest.ts
 __turbopack_context__.s([
     "default",
     ()=>manifest
 ]);
 function manifest() {
     return {
-        name: 'Fredrick N. Claudi | Portfolio',
+        name: 'Fredrick N. Claudi | Software Developer & BI Analyst',
         short_name: 'Fredrick Claudi',
-        description: 'Software Developer & Business Intelligence Analyst portfolio.',
+        description: 'Portfolio of Fredrick N. Claudi, a professional Business Intelligence Analyst and Full Stack Software Developer based in Tanzania.',
         start_url: '/',
         display: 'standalone',
         background_color: '#0B0F19',
@@ -66,15 +65,15 @@ function manifest() {
                 purpose: 'any'
             },
             {
-                src: '/icon.svg',
+                src: '/icon-192.png',
                 sizes: '192x192',
-                type: 'image/svg+xml',
+                type: 'image/png',
                 purpose: 'maskable'
             },
             {
-                src: '/icon.svg',
+                src: '/icon-512.png',
                 sizes: '512x512',
-                type: 'image/svg+xml',
+                type: 'image/png',
                 purpose: 'maskable'
             }
         ]

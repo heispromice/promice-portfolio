@@ -172,7 +172,7 @@ export function Footer() {
               <h3 className="font-semibold text-lg text-[#F4F4F4]">Legal Notice</h3>
             </div>
             <div className="mt-6 space-y-4 font-sans text-xs leading-relaxed text-[#94A3B8]">
-              <p className="text-sm font-semibold text-[#F4F4F4]">Information according to § 5 TMG / Legal Responsibility:</p>
+              <p className="text-sm font-semibold text-[#F4F4F4]">Website Owner:</p>
               <div>
                 <p className="text-[#F4F4F4] font-medium">Fredrick N. Claudi</p>
                 <p>Independent Software Developer & BI Analyst</p>
@@ -184,7 +184,7 @@ export function Footer() {
                 <p>Systems Domain: fredrickclaudi.com</p>
               </div>
               <p className="border-t border-white/[0.03] pt-4 text-[11px] italic">
-                Disclaimer: The content provided on this portfolio represents proprietary architectural frameworks and project representations. Unauthorized duplication is strictly monitored.
+                Disclaimer: The content provided on this portfolio represents proprietary architectural frameworks and project representations. All original content, designs and project materials presented on this website remain the intellectual property of their respective owners unless otherwise stated.
               </p>
             </div>
           </div>
@@ -214,7 +214,7 @@ export function Footer() {
               </div>
               <div>
                 <p className="text-[#F4F4F4] font-medium">2. Client Logging</p>
-                <p>This static deployment infrastructure handles request logs strictly for standard performance optimization and DDOS mitigation. No profiling architectures are active.</p>
+                <p>This website may collect standard server logs for security, performance monitoring, and DDOS protection purposes.</p>
               </div>
               <p className="border-t border-white/[0.03] pt-4 text-[11px]">
                 Protocol Updated: June 2026. Built with strict compliance parameters.

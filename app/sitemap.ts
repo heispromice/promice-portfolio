@@ -1,12 +1,14 @@
 import { MetadataRoute } from 'next';
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: 'https://www.fredrickclaudi.com',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1.0,
-    },
-  ];
+  const baseUrl = 'https://www.fredrickclaudi.com';
+  
+  const routes = ['', '/work', '/archive'].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: route === '' ? 1.0 : 0.8,
+  }));
+
+  return routes;
 }

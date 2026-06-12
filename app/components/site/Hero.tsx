@@ -34,21 +34,6 @@ function AnimatedCounter({ from, to, suffix = "" }: { from: number; to: number; 
 export function Hero({ isParentLoading = false }: HeroProps) {
   const [isImgActive, setIsImgActive] = useState(false);
 
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-    
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (Math.abs(currentScrollY - lastScrollY) > 8) {
-        if (isImgActive) setIsImgActive(false);
-      }
-      lastScrollY = currentScrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isImgActive]);
-
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -258,7 +243,7 @@ export function Hero({ isParentLoading = false }: HeroProps) {
             className="col-span-1 order-3 lg:hidden flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full pt-4"
           >
             <a href="#projects" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#D8B79A] px-6 py-4 text-[12px] font-bold text-[#0B0F19] transition-all">Explore Systems</a>
-            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-4 text-[12px] font-bold text-[#F4F4F4] transition-colors">Check My CV <Eye size={14} /></a>
+            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-4 text-[12px] font-bold text-[#F4F4F4] transition-colors">View My CV <Eye size={14} /></a>
           </motion.div>
 
         </div>

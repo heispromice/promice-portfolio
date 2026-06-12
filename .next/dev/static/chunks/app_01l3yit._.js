@@ -784,28 +784,6 @@ _c = AnimatedCounter;
 function Hero({ isParentLoading = false }) {
     _s1();
     const [isImgActive, setIsImgActive] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "Hero.useEffect": ()=>{
-            let lastScrollY = window.scrollY;
-            const handleScroll = {
-                "Hero.useEffect.handleScroll": ()=>{
-                    const currentScrollY = window.scrollY;
-                    if (Math.abs(currentScrollY - lastScrollY) > 8) {
-                        if (isImgActive) setIsImgActive(false);
-                    }
-                    lastScrollY = currentScrollY;
-                }
-            }["Hero.useEffect.handleScroll"];
-            window.addEventListener("scroll", handleScroll, {
-                passive: true
-            });
-            return ({
-                "Hero.useEffect": ()=>window.removeEventListener("scroll", handleScroll)
-            })["Hero.useEffect"];
-        }
-    }["Hero.useEffect"], [
-        isImgActive
-    ]);
     const containerVariants = {
         hidden: {
             opacity: 0
@@ -845,7 +823,7 @@ function Hero({ isParentLoading = false }) {
                 className: "absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(216,183,154,0.03)_0%,transparent_50%)] pointer-events-none"
             }, void 0, false, {
                 fileName: "[project]/app/components/site/Hero.tsx",
-                lineNumber: 77,
+                lineNumber: 62,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -863,15 +841,15 @@ function Hero({ isParentLoading = false }) {
                                     variants: itemVariants,
                                     className: "inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-[11px] font-medium tracking-normal text-[#D8B79A]",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        children: "Hi, My name is,"
+                                        children: "Hi, My Name Is,"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/site/Hero.tsx",
-                                        lineNumber: 94,
+                                        lineNumber: 79,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                    lineNumber: 90,
+                                    lineNumber: 75,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -882,12 +860,12 @@ function Hero({ isParentLoading = false }) {
                                         children: "Fredrick N. Claudi."
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/site/Hero.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 83,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                    lineNumber: 97,
+                                    lineNumber: 82,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h2, {
@@ -896,7 +874,7 @@ function Hero({ isParentLoading = false }) {
                                     children: "A Software Developer & Business Intelligence Analyst."
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                    lineNumber: 106,
+                                    lineNumber: 91,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -905,7 +883,7 @@ function Hero({ isParentLoading = false }) {
                                     children: "Building software solutions for education, business, and public safety. I focus on creating impact, driving innovation and creating web and mobile applications that streamline operations for better decision-making and enhance societal security."
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                    lineNumber: 113,
+                                    lineNumber: 98,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -927,17 +905,17 @@ function Hero({ isParentLoading = false }) {
                                                     d: "M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                                    lineNumber: 127,
+                                                    lineNumber: 112,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Hero.tsx",
-                                                lineNumber: 126,
+                                                lineNumber: 111,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/site/Hero.tsx",
-                                            lineNumber: 125,
+                                            lineNumber: 110,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -955,17 +933,17 @@ function Hero({ isParentLoading = false }) {
                                                     d: "M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                                    lineNumber: 133,
+                                                    lineNumber: 118,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Hero.tsx",
-                                                lineNumber: 132,
+                                                lineNumber: 117,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/site/Hero.tsx",
-                                            lineNumber: 131,
+                                            lineNumber: 116,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -983,17 +961,17 @@ function Hero({ isParentLoading = false }) {
                                                     d: "M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.498 5.352 1.499 5.485 0 9.948-4.467 9.951-9.96.001-2.659-1.026-5.158-2.894-7.03C17.13 1.79 14.635.764 12.012.764c-5.495 0-9.959 4.468-9.963 9.961-.001 2.083.541 4.116 1.566 5.86l-.99 3.614 3.701-.971zm11.514-4.814c-.312-.156-1.848-.912-2.126-1.013-.279-.102-.482-.156-.684.156-.202.311-.782.156-.959 1.164-.176.102-.353.156-.665.001-.312-.156-1.317-.486-2.51-1.549-.928-.827-1.554-1.849-1.737-2.16-.182-.312-.02-.481.136-.635.14-.139.312-.363.468-.545.156-.182.208-.312.312-.519.104-.208.052-.389-.026-.545-.078-.156-.684-1.649-.938-2.259-.247-.595-.5-.514-.684-.523-.176-.009-.38-.01-.584-.01-.204 0-.537.077-.817.382-.28.305-1.071 1.046-1.071 2.551 0 1.505 1.094 2.959 1.246 3.166.152.208 2.152 3.286 5.213 4.602.728.313 1.297.5 1.74.641.73.232 1.395.2 1.92.121.585-.088 1.848-.756 2.109-1.449.261-.693.261-1.288.182-1.411-.078-.123-.28-.195-.593-.351z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                                    lineNumber: 138,
+                                                    lineNumber: 123,
                                                     columnNumber: 90
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Hero.tsx",
-                                                lineNumber: 138,
+                                                lineNumber: 123,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/site/Hero.tsx",
-                                            lineNumber: 137,
+                                            lineNumber: 122,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1020,14 +998,14 @@ function Hero({ isParentLoading = false }) {
                                                         ry: "5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/site/Hero.tsx",
-                                                        lineNumber: 143,
+                                                        lineNumber: 128,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                         d: "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/site/Hero.tsx",
-                                                        lineNumber: 144,
+                                                        lineNumber: 129,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -1037,18 +1015,18 @@ function Hero({ isParentLoading = false }) {
                                                         y2: "6.5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/site/Hero.tsx",
-                                                        lineNumber: 145,
+                                                        lineNumber: 130,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/site/Hero.tsx",
-                                                lineNumber: 142,
+                                                lineNumber: 127,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/site/Hero.tsx",
-                                            lineNumber: 141,
+                                            lineNumber: 126,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1059,12 +1037,12 @@ function Hero({ isParentLoading = false }) {
                                                 size: 20
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Hero.tsx",
-                                                lineNumber: 149,
+                                                lineNumber: 134,
                                                 columnNumber: 155
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/site/Hero.tsx",
-                                            lineNumber: 149,
+                                            lineNumber: 134,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1075,18 +1053,18 @@ function Hero({ isParentLoading = false }) {
                                                 size: 20
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Hero.tsx",
-                                                lineNumber: 150,
+                                                lineNumber: 135,
                                                 columnNumber: 144
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/site/Hero.tsx",
-                                            lineNumber: 150,
+                                            lineNumber: 135,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                    lineNumber: 121,
+                                    lineNumber: 106,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1097,7 +1075,7 @@ function Hero({ isParentLoading = false }) {
                                             className: "absolute left-0 top-3 bottom-3 w-[2px] bg-gradient-to-b from-[#D8B79A]/40 via-transparent to-transparent pointer-events-none"
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/site/Hero.tsx",
-                                            lineNumber: 158,
+                                            lineNumber: 143,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1117,12 +1095,12 @@ function Hero({ isParentLoading = false }) {
                                                         suffix: "+"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/site/Hero.tsx",
-                                                        lineNumber: 165,
+                                                        lineNumber: 150,
                                                         columnNumber: 40
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                                    lineNumber: 164,
+                                                    lineNumber: 149,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1130,7 +1108,7 @@ function Hero({ isParentLoading = false }) {
                                                     children: "Years Experience"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                                    lineNumber: 167,
+                                                    lineNumber: 152,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1138,13 +1116,13 @@ function Hero({ isParentLoading = false }) {
                                                     children: "Active professional practice."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                                    lineNumber: 170,
+                                                    lineNumber: 155,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/site/Hero.tsx",
-                                            lineNumber: 160,
+                                            lineNumber: 145,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1163,12 +1141,12 @@ function Hero({ isParentLoading = false }) {
                                                         to: 3
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/site/Hero.tsx",
-                                                        lineNumber: 180,
+                                                        lineNumber: 165,
                                                         columnNumber: 40
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                                    lineNumber: 179,
+                                                    lineNumber: 164,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1176,7 +1154,7 @@ function Hero({ isParentLoading = false }) {
                                                     children: "Projects completed"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                                    lineNumber: 182,
+                                                    lineNumber: 167,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1184,19 +1162,19 @@ function Hero({ isParentLoading = false }) {
                                                     children: "Integrated systems deployed."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                                    lineNumber: 185,
+                                                    lineNumber: 170,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/site/Hero.tsx",
-                                            lineNumber: 175,
+                                            lineNumber: 160,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                    lineNumber: 154,
+                                    lineNumber: 139,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1209,7 +1187,7 @@ function Hero({ isParentLoading = false }) {
                                             children: "Explore Systems"
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/site/Hero.tsx",
-                                            lineNumber: 196,
+                                            lineNumber: 181,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1224,25 +1202,25 @@ function Hero({ isParentLoading = false }) {
                                                     className: "transition-transform group-hover:scale-105"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                                    lineNumber: 209,
+                                                    lineNumber: 194,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/site/Hero.tsx",
-                                            lineNumber: 202,
+                                            lineNumber: 187,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                    lineNumber: 192,
+                                    lineNumber: 177,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/site/Hero.tsx",
-                            lineNumber: 83,
+                            lineNumber: 68,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1271,7 +1249,7 @@ function Hero({ isParentLoading = false }) {
                 ${isImgActive ? "translate-x-[22px] translate-y-[22px] border-[#D8B79A]" : "translate-x-[16px] translate-y-[16px] group-hover:translate-x-[22px] group-hover:translate-y-[22px] group-hover:border-[#D8B79A]"}`
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/site/Hero.tsx",
-                                        lineNumber: 223,
+                                        lineNumber: 208,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1285,7 +1263,7 @@ function Hero({ isParentLoading = false }) {
                     ${isImgActive ? "filter-none opacity-100 mix-blend-normal" : "grayscale opacity-75 mix-blend-luminosity group-hover:filter-none group-hover:opacity-100 group-hover:mix-blend-normal"}`
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Hero.tsx",
-                                                lineNumber: 236,
+                                                lineNumber: 221,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1293,31 +1271,31 @@ function Hero({ isParentLoading = false }) {
                   ${isImgActive ? "opacity-0" : "group-hover:opacity-0"}`
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Hero.tsx",
-                                                lineNumber: 245,
+                                                lineNumber: 230,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "absolute inset-0 bg-gradient-to-t from-[#0B0F19]/60 via-transparent to-transparent pointer-events-none"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Hero.tsx",
-                                                lineNumber: 248,
+                                                lineNumber: 233,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/site/Hero.tsx",
-                                        lineNumber: 230,
+                                        lineNumber: 215,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/site/Hero.tsx",
-                                lineNumber: 216,
+                                lineNumber: 201,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/components/site/Hero.tsx",
-                            lineNumber: 215,
+                            lineNumber: 200,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1341,7 +1319,7 @@ function Hero({ isParentLoading = false }) {
                                     children: "Explore Systems"
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                    lineNumber: 260,
+                                    lineNumber: 245,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1350,45 +1328,45 @@ function Hero({ isParentLoading = false }) {
                                     rel: "noreferrer",
                                     className: "inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-4 text-[12px] font-bold text-[#F4F4F4] transition-colors",
                                     children: [
-                                        "Check My CV ",
+                                        "View My CV ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__["Eye"], {
                                             size: 14
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/site/Hero.tsx",
-                                            lineNumber: 261,
-                                            columnNumber: 250
+                                            lineNumber: 246,
+                                            columnNumber: 249
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/components/site/Hero.tsx",
-                                    lineNumber: 261,
+                                    lineNumber: 246,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/site/Hero.tsx",
-                            lineNumber: 254,
+                            lineNumber: 239,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/site/Hero.tsx",
-                    lineNumber: 80,
+                    lineNumber: 65,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/components/site/Hero.tsx",
-                lineNumber: 79,
+                lineNumber: 64,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/site/Hero.tsx",
-        lineNumber: 76,
+        lineNumber: 61,
         columnNumber: 5
     }, this);
 }
-_s1(Hero, "1Rc3st2fzg0B/883tpVVBQrnPWw=");
+_s1(Hero, "YL6E6SeDJupM6x17qUBeEy7ZKlc=");
 _c1 = Hero;
 var _c, _c1;
 __turbopack_context__.k.register(_c, "AnimatedCounter");
@@ -1495,8 +1473,8 @@ function About() {
             skills: [
                 "React",
                 "Next.js",
-                "Vite",
-                "Node.js"
+                "TypeScript",
+                "ASP .NET Core"
             ],
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$code$2d$xml$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Code2$3e$__["Code2"], {
                 size: 18,
@@ -1512,8 +1490,8 @@ function About() {
             description: "Building fast, high-performance cross-platform mobile experiences tailored for seamless native delivery.",
             skills: [
                 "React Native",
-                "APIs",
-                "Mobile UI"
+                "REST APIs",
+                "Expo"
             ],
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$smartphone$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Smartphone$3e$__["Smartphone"], {
                 size: 18,
@@ -1529,8 +1507,9 @@ function About() {
             description: "Structuring clean data pipelines and interactive analytical dashboards to extract operational insights.",
             skills: [
                 "SQL",
-                "Dashboards",
-                "Data Modeling"
+                "Power BI",
+                "Excel",
+                "Tableau"
             ],
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$column$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart3$3e$__["BarChart3"], {
                 size: 18,
@@ -1545,9 +1524,10 @@ function About() {
             title: "ICT Consulting",
             description: "Advising on systems infrastructure, technical audits, secure deployments, and digital scaling blueprints.",
             skills: [
-                "Architecture",
+                "Systems Analysis",
                 "Security",
-                "IT Audits"
+                "Databases",
+                "Digital Strategy"
             ],
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__["ShieldCheck"], {
                 size: 18,
@@ -1604,7 +1584,7 @@ function About() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$site$2f$ScrollReveal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ScrollReveal"], {
                                     delay: 0.1,
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        children: "I’m Fredrick Claudi, a software developer building practical digital systems for schools, businesses, and public-service workflows. My work focuses on web platforms, mobile applications, records systems, dashboards, and tools that help people manage information more clearly and work more efficiently."
+                                        children: "I’m Fredrick Claudi, a software developer focused on building reliable software systems for schools, businesses, and public-service organizations. My work focuses on web platforms, mobile applications, records systems, dashboards, and tools that help people manage information more clearly and work more efficiently."
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/site/About.tsx",
                                         lineNumber: 52,
@@ -1816,12 +1796,12 @@ function Projects() {
     const projectList = [
         {
             title: "Salama SOS Emergency App",
-            description: "A mobile emergency response application designed to send instant SOS alerts, broadcast real-time GPS location coordinates, and establish immediate links to trusted contacts.",
+            description: "A mobile emergency response application designed to help individuals quickly alert trusted contacts and share location information during critical situations",
             stack: [
                 "React Native",
                 "GPS Tracking",
                 "Emergency Alerts",
-                "Real-Time Location"
+                "Real-Time Messaging"
             ],
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$smartphone$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Smartphone$3e$__["Smartphone"], {
                 size: 20,
@@ -4082,7 +4062,7 @@ function Footer() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-sm font-semibold text-[#F4F4F4]",
-                                        children: "Information according to § 5 TMG / Legal Responsibility:"
+                                        children: "Website Owner:"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/site/Footer.tsx",
                                         lineNumber: 175,
@@ -4099,7 +4079,7 @@ function Footer() {
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                children: "Independent Solutions Provider & Systems Architect"
+                                                children: "Independent Software Developer & BI Analyst"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Footer.tsx",
                                                 lineNumber: 178,
@@ -4136,7 +4116,7 @@ function Footer() {
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                children: "Systems Domain: promice.dev"
+                                                children: "Systems Domain: fredrickclaudi.com"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Footer.tsx",
                                                 lineNumber: 184,
@@ -4150,7 +4130,7 @@ function Footer() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "border-t border-white/[0.03] pt-4 text-[11px] italic",
-                                        children: "Disclaimer: The content provided on this portfolio represents proprietary architectural frameworks and project representations. Unauthorized duplication is strictly monitored."
+                                        children: "Disclaimer: The content provided on this portfolio represents proprietary architectural frameworks and project representations. All original content, designs and project materials presented on this website remain the intellectual property of their respective owners unless otherwise stated."
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/site/Footer.tsx",
                                         lineNumber: 186,
@@ -4239,7 +4219,7 @@ function Footer() {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        children: "As a systems engineer, data integrity and privacy are wired into my philosophy. This portfolio platform does not deploy tracking scripts, third-party analytical cookies, or pixel harvesting pipelines."
+                                        children: "As a software developer, data integrity and privacy are wired into my philosophy. This portfolio platform does not deploy tracking scripts, third-party analytical cookies, or pixel harvesting pipelines."
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/site/Footer.tsx",
                                         lineNumber: 208,
@@ -4256,7 +4236,7 @@ function Footer() {
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                children: "When you interact with the direct CTAs (WhatsApp or Email), your transmission follows standard TLS/SSL encrypted protocols natively handled by your respective device clients."
+                                                children: "When you interact with the direct CTAs (WhatsApp, Phone call or Email), your transmission follows standard TLS/SSL encrypted protocols natively handled by your respective device clients."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Footer.tsx",
                                                 lineNumber: 213,
@@ -4279,7 +4259,7 @@ function Footer() {
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                children: "This static deployment infrastructure handles request logs strictly for standard performance optimization and DDOS mitigation. No profiling architectures are active."
+                                                children: "This website may collect standard server logs for security, performance monitoring, and DDOS protection purposes."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/site/Footer.tsx",
                                                 lineNumber: 217,
