@@ -14,7 +14,7 @@ export function About() {
     },
     {
       title: "Mobile Application Development",
-      description: "Building fast, high-performance cross-platform mobile experiences tailored for seamless native delivery.",
+      description: "Developing fast, high-performance cross-platform mobile experiences tailored for seamless native delivery.",
       skills: ["React Native", "REST APIs", "Expo"],
       icon: <Smartphone size={18} className="text-[#D8B79A]" />,
     },
@@ -26,8 +26,8 @@ export function About() {
     },
     {
       title: "ICT Consulting",
-      description: "Advising on systems infrastructure, technical audits, secure deployments, and digital scaling blueprints.",
-      skills: ["Systems Analysis", "Security", "Databases", "Digital Strategy"],
+      description: "Advising on systems infrastructure, technical audits, secure deployments, IT support and digital scaling blueprints.",
+      skills: ["Systems Analysis", "Security", "Databases", "IT Support", "Digital Strategy"],
       icon: <ShieldCheck size={18} className="text-[#D8B79A]" />,
     },
   ];
@@ -50,14 +50,14 @@ export function About() {
           <div className="space-y-6 font-sans text-[15px] sm:text-[16px] leading-relaxed text-[#F4F4F4]/90">
             <ScrollReveal delay={0.1}>
               <p>
-                I’m Fredrick Claudi, a software developer focused on building reliable software systems for schools, businesses, and public-service organizations.
+                I’m Fredrick Claudi, a software developer focused on developing reliable software systems for schools, businesses, and public-service organizations.
                 My work focuses on web platforms, mobile applications, records systems, dashboards, and tools that help people manage information more clearly and work more efficiently.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.15}>
               <p>
                 I’m especially interested in education technology and business systems in Tanzania, where reliable software can help schools, teams, and institutions close operational gaps.
-                Alongside development, I bring a strong interest in language, communication, and usability, which helps me build systems that are not only technical, but clear, accessible, and useful to the people who depend on them.
+                Alongside development, I bring a strong interest in language, communication, and usability, which helps me develop systems that are not only technical, but clear, accessible, and useful to the people who depend on them.
               </p>
             </ScrollReveal>
           </div>
@@ -68,7 +68,7 @@ export function About() {
           <ScrollReveal>
             <div className="flex items-center gap-4 lg:pt-0 pt-4">
               <span className="font-bold text-xs uppercase tracking-[0.25em] text-[#D8B79A] whitespace-nowrap">
-                What I Build
+                What I Do
               </span>
               <div className="h-[1px] w-full bg-white/10 lg:block hidden" />
             </div>

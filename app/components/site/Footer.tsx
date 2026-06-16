@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowUp, X, Shield, Scale } from "lucide-react";
+import { X, Shield, Scale } from "lucide-react";
 
 export function Footer() {
   const [isImprintOpen, setIsImprintOpen] = useState(false);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+  const [localTime, setLocalTime] = useState("");
 
   useEffect(() => {
     if (isImprintOpen || isPrivacyOpen) {
@@ -16,7 +17,23 @@ export function Footer() {
     return () => { document.body.style.overflow = ""; };
   }, [isImprintOpen, isPrivacyOpen]);
 
-  // ICONS ZILIZOPANGWA KWA USAWA THABITI (Symmetrical 16x16px boxes)
+  useEffect(() => {
+    const updateTime = () => {
+      const options: Intl.DateTimeFormatOptions = {
+        timeZone: "Africa/Dar_es_Salaam",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false
+      };
+      setLocalTime(new Intl.DateTimeFormat("en-US", options).format(new Date()));
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   const icons = {
     react: (
       <svg className="h-4 w-4 shrink-0 text-[#94A3B8] group-hover:text-[#D8B79A] transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="2"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
@@ -68,63 +85,63 @@ export function Footer() {
             </div>
 
             <p className="max-w-md font-sans text-[15px] leading-relaxed text-[#F4F4F4]/90">
-              I build reliable web and mobile software for education, business, and public safety.
+              I design and develop reliable web and mobile software for education, business, and public safety.
             </p>
             <p className="max-w-md font-sans text-[15px] leading-relaxed text-[#F4F4F4]/90">
               I work across the following technologies.
             </p>
           </div>
 
-        {/* Column 2: FRONT-END STACK */}
-<div className="md:col-span-3">
-  <p className="font-mono text-[12px] uppercase tracking-[0.25em] text-[#D8B79A] font-bold">
-    Front-end
-  </p>
-  <ul className="mt-5 space-y-3.5 font-mono text-[11px]  text-[#F4F4F4]">
-    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
-      <div className="w-4 h-4 flex items-center justify-center">{icons.react}</div>
-      <span>React / Next.js</span>
-    </li>
-    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
-      <div className="w-4 h-4 flex items-center justify-center">{icons.ts}</div>
-      <span>TypeScript</span>
-    </li>
-    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
-      <div className="w-4 h-4 flex items-center justify-center">{icons.tailwind}</div>
-      <span>Tailwind CSS</span>
-    </li>
-    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
-      <div className="w-4 h-4 flex items-center justify-center">{icons.js}</div>
-      <span>Vanilla JavaScript</span>
-    </li>
-  </ul>
-</div>
+          {/* Column 2: FRONT-END STACK */}
+          <div className="md:col-span-3">
+            <p className="font-mono text-[12px] uppercase tracking-[0.25em] text-[#D8B79A] font-bold">
+              Front-end
+            </p>
+            <ul className="mt-5 space-y-3.5 font-mono text-[11px] text-[#F4F4F4]">
+              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+                <div className="w-4 h-4 flex items-center justify-center">{icons.react}</div>
+                <span>React / Next.js</span>
+              </li>
+              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+                <div className="w-4 h-4 flex items-center justify-center">{icons.ts}</div>
+                <span>TypeScript</span>
+              </li>
+              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+                <div className="w-4 h-4 flex items-center justify-center">{icons.tailwind}</div>
+                <span>Tailwind CSS</span>
+              </li>
+              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+                <div className="w-4 h-4 flex items-center justify-center">{icons.js}</div>
+                <span>Vanilla JavaScript</span>
+              </li>
+            </ul>
+          </div>
 
-{/* Column 3: BACK-END & FRAMEWORKS */}
-<div className="md:col-span-4">
-  <p className="font-mono text-[12px] uppercase tracking-[0.25em] text-[#D8B79A] font-bold">
-    Back-end &amp; Frameworks
-  </p>
-  <ul className="mt-5 space-y-3.5 font-mono text-[11px] text-[#F4F4F4]">
-    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
-      <div className="w-4 h-4 flex items-center justify-center">{icons.csharp}</div>
-      <span>C# / .NET Core</span>
-    </li>
-    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
-      <div className="w-4 h-4 flex items-center justify-center">{icons.net}</div>
-      <span>ASP.NET MVC / Web API</span>
-    </li>
-    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
-      <div className="w-4 h-4 flex items-center justify-center">{icons.node}</div>
-      <span>Node.js / Express</span>
-    </li>
-    <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
-      <div className="w-4 h-4 flex items-center justify-center">{icons.database}</div>
-      <span>PostgreSQL / SQL Server</span>
-    </li>
-  </ul>
-</div>
-            
+          {/* Column 3: BACK-END & FRAMEWORKS */}
+          <div className="md:col-span-4">
+            <p className="font-mono text-[12px] uppercase tracking-[0.25em] text-[#D8B79A] font-bold">
+              Back-end &amp; Frameworks
+            </p>
+            <ul className="mt-5 space-y-3.5 font-mono text-[11px] text-[#F4F4F4]">
+              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+                <div className="w-4 h-4 flex items-center justify-center">{icons.csharp}</div>
+                <span>C# / .NET Core</span>
+              </li>
+              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+                <div className="w-4 h-4 flex items-center justify-center">{icons.net}</div>
+                <span>ASP.NET MVC / Web API</span>
+              </li>
+              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+                <div className="w-4 h-4 flex items-center justify-center">{icons.node}</div>
+                <span>Node.js / Express</span>
+              </li>
+              <li className="group flex items-center gap-3 cursor-default hover:text-[#D8B79A] active:text-[#D8B79A] transition-colors">
+                <div className="w-4 h-4 flex items-center justify-center">{icons.database}</div>
+                <span>PostgreSQL / SQL Server</span>
+              </li>
+            </ul>
+          </div>
+          
         </div>
 
         {/* LOWER FOOTER */}
@@ -133,29 +150,34 @@ export function Footer() {
             © {new Date().getFullYear()} Fredrick N. Claudi. All rights reserved. Tanzania.
           </p>
 
-          <ul className="flex flex-wrap gap-x-8 gap-y-3 font-ui text-[11px] uppercase tracking-[0.2em] text-[#94A3B8]">
-            <li>
-              <button 
-                onClick={() => setIsImprintOpen(true)} 
-                className="hover:text-[#F4F4F4] transition-colors uppercase tracking-[0.2em] focus:outline-none"
-              >
-                Imprint
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => setIsPrivacyOpen(true)} 
-                className="hover:text-[#F4F4F4] transition-colors uppercase tracking-[0.2em] focus:outline-none"
-              >
-                Privacy
-              </button>
-            </li>
-            <li>
-              <a href="#hero" className="inline-flex items-center gap-1.5 hover:text-[#F4F4F4] transition-colors">
-                Back to top <ArrowUp className="h-3 w-3" />
-              </a>
-            </li>
-          </ul>
+          {/* Unbroken Flex-Row Navigation Bar */}
+          <div className="w-full md:w-auto flex items-center justify-between md:justify-end">
+            <ul className="flex items-center gap-5 font-ui text-[11px] uppercase tracking-[0.2em] text-[#94A3B8]">
+              <li>
+                <button 
+                  onClick={() => setIsImprintOpen(true)} 
+                  className="hover:text-[#F4F4F4] transition-colors uppercase tracking-[0.2em] focus:outline-none whitespace-nowrap"
+                >
+                  Imprint
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => setIsPrivacyOpen(true)} 
+                  className="hover:text-[#F4F4F4] transition-colors uppercase tracking-[0.2em] focus:outline-none whitespace-nowrap"
+                >
+                  Privacy
+                </button>
+              </li>
+              {/* Embedded Time System sharing exact same grid spacing semantics */}
+              <li className="flex items-center gap-2 whitespace-nowrap select-none">
+                <span className="font-mono text-[11px] tracking-widest bg-white/[0.02] border border-white/[0.05] px-2.5 py-1 rounded-full text-[#D8B79A] tabular-nums font-bold">
+                  {localTime || "00:00:00"}
+                </span>
+                <span>EAT</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 

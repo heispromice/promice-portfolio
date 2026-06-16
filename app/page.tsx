@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Script from "next/script";
 import { Preloader } from "./components/site/Preloader";
 import { Header } from "./components/site/Header";
 import { Hero } from "./components/site/Hero";
@@ -9,15 +10,13 @@ import { Projects } from "./components/site/Projects";
 import { Systems } from "./components/site/Systems";
 import { Contact } from "./components/site/Contact";
 import { Footer } from "./components/site/Footer";
+import ScrollToTop from "./components/site/ScrollToTop";
 
 export default function Home() {
-  // State to track if the preloader is active
   const [isLoading, setIsLoading] = useState(true);
 
-  // Prevent unexpected UI jumping once the preloader transitions out
   useEffect(() => {
     if (!isLoading) {
-      // Force the viewport to snap straight back to the top seamlessly
       window.scrollTo({
         top: 0,
         left: 0,
@@ -67,16 +66,15 @@ export default function Home() {
 
   return (
     <>
-      <script
+      <Script
+        id="json-ld-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      {/* 1. Preloader rendered with the required onComplete handler */}
       {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
       
-      {/* 2. Main content container wraps viewport flow */}
-      <div className="flex flex-col min-h-screen bg-[#0B0F19]">
+      <div className="relative flex flex-col min-h-screen bg-[#0B0F19]">
         <Header />
         <main className="flex-1">
           <Hero isParentLoading={isLoading} />
@@ -86,6 +84,9 @@ export default function Home() {
           <Contact />
         </main>
         <Footer />
+
+        {/* Floating progress indicator component loaded dynamically on the bottom layer */}
+        <ScrollToTop />
       </div>
     </>
   );

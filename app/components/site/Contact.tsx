@@ -75,7 +75,7 @@ export function Contact() {
           <ScrollReveal direction="up" delay={0.05}>
             <h2 className="mt-6 max-w-xl font-semibold text-[18px] leading-relaxed tracking-normal text-[#F4F4F4] sm:text-[20px] md:text-2xl">
               If you are planning a system that needs clarity, reliability, and long-term value, I would be glad to help build it.{" "}
-              <span className="text-[#94A3B8]">I build reliable software for education, business, and public safety</span>
+              <span className="text-[#94A3B8]">I develop reliable software for education, business, and public safety</span>
               <span className="text-[#D8B79A]">.</span>
             </h2>
           </ScrollReveal>
@@ -96,10 +96,10 @@ export function Contact() {
                 <ScrollReveal direction="up" delay={0.15}>
                   <div className="space-y-4 text-[14px] md:text-[15px] leading-relaxed text-[#F4F4F4]/90 font-medium">
                     <p>
-                      Whether you need a new platform, a cleaner backend, or help turning a complex workflow into a simple digital product, I build with clarity, structure, and long-term maintainability in mind. 
+                      Whether you need a new platform, a cleaner backend, or help turning a complex workflow into a simple digital product, I develop with clarity, structure, and long-term maintainability in mind. 
                     </p>
                     <p>
-                      Have a school, business, or public-service workflow that needs a reliable digital system? I’d be glad to help shape it and build it.
+                      Have a school, business, or public-service workflow that needs a reliable digital system? I’d be glad to help shape it and develop it.
                     </p>
                   </div>
                 </ScrollReveal>
