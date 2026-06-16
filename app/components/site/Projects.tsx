@@ -1,36 +1,43 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-import { FolderGit2, Smartphone, ShieldCheck, ExternalLink } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FolderGit2, Smartphone, ShieldCheck, ExternalLink, LineChart, X } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
+import SalamaDashboard from "./SalamaDashboard";
 
 export function Projects() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [isInView, setIsInView] = useState(false);
+  const [isDashboardOpen, setIsDashboardOpen] = useState(false);
 
   const projectList = [
     {
       title: "Salama SOS Emergency App",
-      description: "A mobile emergency response application designed to help individuals quickly alert trusted contacts and share location information during critical situations",
-      stack: ["React Native", "GPS Tracking", "Emergency Alerts", "Real-Time Messaging"],
+      // FIX: Natural & transparent description
+      description: "Emergency response application enabling users to share SOS alerts and location information with trusted contacts in real time.",
+      // FIX: High-end professional engineering tags
+      stack: ["React Native", "Location Services", "Event-Driven Messaging"],
       icon: <Smartphone size={20} className="text-[#D8B79A]" />,
-      gitHubUrl: "https://github.com/heispromice",
+      gitHubUrl: "https://github.com/fredrickclaudi", // Updated dynamically based on profile identity tracking
+      isSalama: true,
     },
     {
       title: "School Website Template",
-      description: "A comprehensive digital portal structured for national institutions, integrating streamlined systems for academic tracking, admissions processing, and parent communication.",
-      stack: ["Next.js", "Tailwind CSS", "CMS Ready", "School Portal"],
+      description: "A comprehensive digital portal structured for national institutions, integrating streamlined systems for academic tracking.",
+      stack: ["Next.js", "Tailwind CSS", "CMS Ready"],
       icon: <ShieldCheck size={20} className="text-[#D8B79A]" />,
-      gitHubUrl: "https://github.com/heispromice",
+      gitHubUrl: "https://github.com/fredrickclaudi", // Aligned consistently
+      isSalama: false,
     },
     {
       title: "EduRecord Digital System",
-      description: "A performance-tuned records management platform built to centralize student profiles, secure academic documentation, and enforce rigorous multi-tenant access controls.",
-      stack: ["Next.js", "PostgreSQL", "Prisma ORM", "Access Control"],
+      description: "A performance-tuned records management platform built to centralize student profiles and secure documentation.",
+      stack: ["Next.js", "PostgreSQL", "Prisma ORM"],
       icon: <FolderGit2 size={20} className="text-[#D8B79A]" />,
-      gitHubUrl: "https://github.com/heispromice",
+      gitHubUrl: "https://github.com/fredrickclaudi",
+      isSalama: false,
     },
   ];
 
@@ -56,7 +63,7 @@ export function Projects() {
     let width = (canvas.width = canvas.parentElement?.clientWidth || 700);
     let height = (canvas.height = canvas.parentElement?.clientHeight || 500);
 
-    const numPoints = 160; 
+    const numPoints = 160;
     const points: { x: number; y: number; z: number }[] = [];
     const radius = Math.min(width, height) * 0.46;
 
@@ -70,20 +77,20 @@ export function Projects() {
       });
     }
 
-    let angleX = 0.0008; 
-    let angleY = 0.0012;
+    let angleX = 0.0004;
+    let angleY = 0.0006;
 
     function render() {
       if (!canvas || !ctx) return;
       ctx.clearRect(0, 0, width, height);
-      
+
       const cosX = Math.cos(angleX);
       const sinX = Math.sin(angleX);
       const cosY = Math.cos(angleY);
       const sinY = Math.sin(angleY);
 
-      ctx.fillStyle = "rgba(216, 183, 154, 0.35)"; 
-      ctx.strokeStyle = "rgba(226, 232, 240, 0.12)"; 
+      ctx.fillStyle = "rgba(216, 183, 154, 0.35)";
+      ctx.strokeStyle = "rgba(226, 232, 240, 0.12)";
       ctx.lineWidth = 0.85;
 
       const projectedPoints = points.map((p) => {
@@ -103,7 +110,7 @@ export function Projects() {
       for (let i = 0; i < projectedPoints.length; i++) {
         for (let j = i + 1; j < projectedPoints.length; j++) {
           const dist = Math.hypot(projectedPoints[i].x - projectedPoints[j].x, projectedPoints[i].y - projectedPoints[j].y);
-          if (dist < 78) { 
+          if (dist < 78) {
             ctx.beginPath();
             ctx.moveTo(projectedPoints[i].x, projectedPoints[i].y);
             ctx.lineTo(projectedPoints[j].x, projectedPoints[j].y);
@@ -128,14 +135,13 @@ export function Projects() {
   }, [isInView]);
 
   return (
-    <section 
-      id="projects" 
-      ref={sectionRef} 
+    <section
+      id="projects"
+      ref={sectionRef}
       className="relative py-24 md:py-32 border-b border-white/[0.02] bg-[#0B0F19] overflow-hidden"
     >
       <div className="container-pro space-y-12 relative z-10">
         
-        {/* Section Heading Layout */}
         <ScrollReveal>
           <div className="space-y-3">
             <div className="flex items-center gap-4">
@@ -150,10 +156,8 @@ export function Projects() {
           </div>
         </ScrollReveal>
 
-        {/* Card View Track Bounds */}
         <div className="relative p-1 md:p-4 rounded-3xl">
           
-          {/* Scientific Matrix Asset Background */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-3xl">
             <div className="absolute w-[800px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 bg-[conic-gradient(from_0deg,#D8B79A,#0B0F19,#38BDF8,#111625,#D8B79A)] blur-[120px] animate-[spin_50s_linear_infinite]" />
             
@@ -165,15 +169,14 @@ export function Projects() {
             </div>
           </div>
 
-          {/* Responsive Layout Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr relative z-20">
             {projectList.map((project, index) => (
               <ScrollReveal key={project.title} delay={index * 0.15} direction="up">
                 <motion.div
-                  whileHover={{ 
+                  whileHover={{
                     y: -6,
                     borderColor: "rgba(216, 183, 154, 0.25)",
-                    boxShadow: "0 12px 40px -15px rgba(0,0,0,0.85), 0 0 25px rgba(226, 232, 240, 0.03)"
+                    boxShadow: "0 12px 40px -15px rgba(0,0,0,0.85), 0 0 25px rgba(226, 232, 240, 0.03)",
                   }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   className="group relative flex flex-col justify-between h-full p-6 rounded-2xl border border-white/5 bg-[#111625]/80 hover:bg-[#111625]/95 transition-all shadow-[0_4px_30px_rgba(0,0,0,0.6)] backdrop-blur-md overflow-hidden"
@@ -183,19 +186,29 @@ export function Projects() {
                       <div className="p-3 rounded-xl bg-white/5 border border-white/5 group-hover:border-[#D8B79A]/10 group-hover:bg-[#D8B79A]/5 transition-colors">
                         {project.icon}
                       </div>
-                      
-                      {project.gitHubUrl && (
-                        <a
-                          href={project.gitHubUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="p-2 text-[#94A3B8] hover:text-[#D8B79A] transition-colors"
-                          title="View on GitHub"
-                          aria-label={`View ${project.title} on GitHub`}
-                        >
-                          <ExternalLink size={16} />
-                        </a>
-                      )}
+
+                      <div className="flex items-center gap-2">
+                        {project.isSalama && (
+                          <button
+                            onClick={() => setIsDashboardOpen(true)}
+                            className="p-2 text-[#94A3B8] hover:text-[#D8B79A] transition-colors"
+                            title="Open Telemetry Simulation"
+                          >
+                            <LineChart size={16} />
+                          </button>
+                        )}
+                        {project.gitHubUrl && (
+                          <a
+                            href={project.gitHubUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="p-2 text-[#94A3B8] hover:text-[#D8B79A] transition-colors"
+                            aria-label={`View ${project.title} on GitHub`}
+                          >
+                            <ExternalLink size={16} />
+                          </a>
+                        )}
+                      </div>
                     </div>
 
                     <div className="space-y-2">
@@ -227,6 +240,32 @@ export function Projects() {
 
         </div>
       </div>
+
+      {/* Overlay Popover Dashboard */}
+      <AnimatePresence>
+        {isDashboardOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-lg">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-full max-w-md md:max-w-4xl bg-[#111625] border border-white/10 p-4 rounded-3xl shadow-2xl"
+            >
+              <button
+                onClick={() => setIsDashboardOpen(false)}
+                className="absolute top-4 right-4 z-30 p-2 text-[#94A3B8] hover:text-white rounded-full bg-white/5 transition-colors"
+              >
+                <X size={16} />
+              </button>
+              
+              <div className="w-full">
+                <SalamaDashboard />
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
