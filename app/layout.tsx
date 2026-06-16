@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "Fredrick N. Claudi | Software Developer in Tanzania",
     template: "%s | Fredrick N. Claudi"
   },
-  description: "Fredrick N. Claudi is a Tanzania-based software developer and business intelligence analyst building web, mobile, and data systems for education, business, and public safety.",
+  description: "Fredrick N. Claudi is a Tanzanian software developer and business intelligence analyst developing web, mobile, and data systems for education, business, and public safety.",
   keywords: [
     "Fredrick N. Claudi",
     "Fredrick Claudi",

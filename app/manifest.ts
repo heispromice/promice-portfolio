@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Fredrick N. Claudi | Software Developer & BI Analyst',
     short_name: 'Fredrick Claudi',
-    description: 'Portfolio of Fredrick N. Claudi, a professional Business Intelligence Analyst and Full Stack Software Developer based in Tanzania.',
+    description: 'Portfolio of Fredrick N. Claudi, a professional Business Intelligence Analyst and Full Stack Software Developer in Tanzania.',
     start_url: '/',
     display: 'standalone',
     background_color: '#0B0F19',

@@ -99,7 +99,7 @@ export function Hero({ isParentLoading = false }: HeroProps) {
               variants={itemVariants}
               className="max-w-2xl text-[15px] sm:text-[16px] lg:text-[18px] leading-relaxed text-[#F4F4F4] font-medium"
             >
-              Building software solutions for education, business, and public safety. I focus on creating impact, driving innovation and creating web and mobile applications that streamline operations for better decision-making and enhance societal security.
+             Developing software solutions for education, business, and public safety. I focus on creating impact, driving innovation and creating web and mobile applications that streamline operations for better decision-making and enhance societal security.
             </motion.p>
 
             {/* CONTACT ICONS */}
