@@ -59,7 +59,7 @@ export default function Home() {
       sameAs: [
         "https://github.com/heispromice",
         "https://tz.linkedin.com/in/fredrick-claudi-5a162230b",
-        "https://www.instagram.com/_heispromice",
+        "https://www.instagram.com/_promicee",
       ],
     },
   };

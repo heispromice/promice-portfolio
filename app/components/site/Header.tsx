@@ -69,7 +69,7 @@ export function Header() {
 
     setTimeout(() => {
       setIsAnimating(false);
-    }, 2300); // Muda umeongezwa hapa pia kuendana na animation ya sekunde 2.2
+    }, 2300); 
   };
 
   useEffect(() => {

@@ -33,6 +33,36 @@ function AnimatedCounter({ from, to, suffix = "" }: { from: number; to: number; 
 
 export function Hero({ isParentLoading = false }: HeroProps) {
   const [isImgActive, setIsImgActive] = useState(false);
+  
+  const [textIndex, setTextIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  
+  const texts = ["Software Developer", "Business Intelligence Analyst"];
+  const typingSpeed = isDeleting ? 40 : 80;
+  const delayBetweenTexts = 2000;
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    const currentFullText = texts[textIndex];
+
+    if (!isDeleting && displayText === currentFullText) {
+      timer = setTimeout(() => setIsDeleting(true), delayBetweenTexts);
+    } else if (isDeleting && displayText === "") {
+      setIsDeleting(false);
+      setTextIndex((prev) => (prev + 1) % texts.length);
+    } else {
+      timer = setTimeout(() => {
+        setDisplayText((prev) =>
+          isDeleting
+            ? currentFullText.substring(0, prev.length - 1)
+            : currentFullText.substring(0, prev.length + 1)
+        );
+      }, typingSpeed);
+    }
+
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, textIndex]);
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -74,9 +104,37 @@ export function Hero({ isParentLoading = false }: HeroProps) {
 
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-[11px] font-medium tracking-normal text-[#D8B79A]"
+              className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.03] backdrop-blur-md text-[12px] font-medium tracking-normal text-[#F4F4F4] shadow-[0_4px_12px_rgba(0,0,0,0.2)] hover:border-[#D8B79A]/30 transition-colors duration-300 group/badge cursor-default select-none"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <span>Hi, My Name Is,</span>
+              <motion.span
+                className="inline-block origin-[70%_70%] text-sm"
+                animate={{ 
+                  rotate: [0, 14, -8, 14, -4, 10, 0] 
+                }}
+                transition={{
+                  duration: 2.5,
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                  repeatDelay: 4
+                }}
+                whileHover={{
+                  rotate: [0, 14, -8, 14, -4, 10, 0],
+                  transition: { duration: 1.2, ease: "easeInOut" }
+                }}
+              >
+                👋
+              </motion.span>
+              
+              <span className="text-[#94A3B8] font-sans">
+                Hi, my name is 
+              </span>
+
+              <span className="relative flex h-2 w-2 ml-1">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D8B79A]/40 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D8B79A]"></span>
+              </span>
             </motion.div>
 
             <div className="space-y-2">
@@ -90,16 +148,18 @@ export function Hero({ isParentLoading = false }: HeroProps) {
 
             <motion.h2
               variants={itemVariants}
-              className="font-sans text-xl font-semibold tracking-tight text-[#94A3B8] sm:text-2xl lg:text-3xl"
+              className="font-sans text-xl font-bold tracking-tight sm:text-2xl lg:text-3xl min-h-[40px] flex items-center"
             >
-              A Software Developer &amp; Business Intelligence Analyst.
+              <span className="bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-[#60A5FA] bg-clip-text text-transparent select-none">
+                {displayText}
+              </span>
             </motion.h2>
 
             <motion.p
               variants={itemVariants}
               className="max-w-2xl text-[15px] sm:text-[16px] lg:text-[18px] leading-relaxed text-[#F4F4F4] font-medium"
             >
-             Developing software solutions for education, business, and public safety. I focus on creating impact, driving innovation and creating web and mobile applications that streamline operations for better decision-making and enhance societal security.
+              Developing software solutions for education, business, and public safety. I focus on creating impact, driving innovation and creating web and mobile applications that streamline operations for better decision-making and enhance societal security.
             </motion.p>
 
             {/* CONTACT ICONS */}
@@ -206,7 +266,6 @@ export function Hero({ isParentLoading = false }: HeroProps) {
                 e.preventDefault();
                 setIsImgActive((prev) => !prev);
               }}
-              // Tofauti ya desktop hover na mobile tap:
               className="relative group w-full max-w-[260px] sm:max-w-[300px] aspect-[4/5] cursor-pointer touch-manipulation"
             >
               {/* BORDER FRAME */}
