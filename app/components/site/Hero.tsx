@@ -38,7 +38,7 @@ export function Hero({ isParentLoading = false }: HeroProps) {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   
-  const texts = ["Software Developer", "Business Intelligence Analyst"];
+  const texts = ["A Software Developer", "Business Intelligence Analyst"];
   const typingSpeed = isDeleting ? 40 : 80;
   const delayBetweenTexts = 2000;
 
@@ -104,37 +104,15 @@ export function Hero({ isParentLoading = false }: HeroProps) {
 
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.03] backdrop-blur-md text-[12px] font-medium tracking-normal text-[#F4F4F4] shadow-[0_4px_12px_rgba(0,0,0,0.2)] hover:border-[#D8B79A]/30 transition-colors duration-300 group/badge cursor-default select-none"
+              className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.03] backdrop-blur-md text-[12px] font-medium tracking-normal text-[#F4F4F4] shadow-[0_4px_12px_rgba(0,0,0,0.2)] hover:border-[#D8B79A]/30 transition-colors duration-300 group/badge cursor-default select-none"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <motion.span
-                className="inline-block origin-[70%_70%] text-sm"
-                animate={{ 
-                  rotate: [0, 14, -8, 14, -4, 10, 0] 
-                }}
-                transition={{
-                  duration: 2.5,
-                  ease: "easeInOut",
-                  repeat: Infinity,
-                  repeatDelay: 4
-                }}
-                whileHover={{
-                  rotate: [0, 14, -8, 14, -4, 10, 0],
-                  transition: { duration: 1.2, ease: "easeInOut" }
-                }}
-              >
-                👋
-              </motion.span>
-              
-              <span className="text-[#94A3B8] font-sans">
+           
+              <span className="text-[#94A3B8] font-sans tracking-wide">
                 Hi, my name is 
               </span>
 
-              <span className="relative flex h-2 w-2 ml-1">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D8B79A]/40 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D8B79A]"></span>
-              </span>
             </motion.div>
 
             <div className="space-y-2">
@@ -159,7 +137,7 @@ export function Hero({ isParentLoading = false }: HeroProps) {
               variants={itemVariants}
               className="max-w-2xl text-[15px] sm:text-[16px] lg:text-[18px] leading-relaxed text-[#F4F4F4] font-medium"
             >
-              Developing software solutions for education, business, and public safety. I focus on creating impact, driving innovation and creating web and mobile applications that streamline operations for better decision-making and enhance societal security.
+              Developing software solutions for education, business, and public safety. I focus on creating web and mobile applications that streamline operations for better decision-making and enhance societal security.
             </motion.p>
 
             {/* CONTACT ICONS */}
